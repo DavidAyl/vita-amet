@@ -210,7 +210,7 @@ function Navbar() {
 
               <li className="nav-item me-5 me-lg-0">
                 <Link
-                  to="/contact"
+                  to="/cart"
                   className='nav-link'>
                   <FaShoppingCart />
                 </Link>
