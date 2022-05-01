@@ -1,0 +1,13 @@
+html, * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h5 {
+  letter-spacing: 10px;
+}
+
+main {
+  margin-top: 100px;
+}
