@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model } = require("mongoose");
 
 const locationSchema = new Schema({
   name: {
@@ -8,11 +8,11 @@ const locationSchema = new Schema({
   items: [
     {
       type: Schema.Types.ObjectId,
-      ref: 'Item',
+      ref: "Item",
     },
   ],
 });
 
-const Locations = model('Locations', locationSchema);
+const Locations = model("Locations", locationSchema);
 
 module.exports = Locations;
