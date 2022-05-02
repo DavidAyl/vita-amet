@@ -5,14 +5,18 @@ const typeDefs = gql`
     _id: ID
     name: String!
   }
+  type Review {
+    _id: ID
+    name: String
+  }
 
   type Item {
     _id: ID
-    name: String!
-    location: String!
+    name: String
+    location: String
     price: Float!
     description: String!
-    image: String!
+    image: String
     inStock: Boolean
   }
 

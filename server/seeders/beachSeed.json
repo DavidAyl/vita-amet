@@ -1,78 +1,100 @@
 [
   {
-    "item": "Water Skiis",
+    "name": "Water Skiis",
     "price": "150.99",
     "description":"A pair of skis enabling the wearer to skim the surface of the water when towed by a motorboat.",
     "image":"",
-    "reviews":""
+    "reviews":"",
+    "location":"Beach"
+    
   },
   {
-    "item": "Fins",
+    "name": "Fins",
     "price": "35.99",
     "description":"Swim fins are a kind of footwear that are intended to improve one's agility and speed while swimming..",
     "image":"",
-    "reviews":""
+    "reviews":"",
+    "location":"Beach"
+
   },{
-    "item": "Jet Ski",
-    "price": "199.00/hr",
+    "name": "Jet Ski",
+    "price": "199.00",
     "description":"A personal watercraft, also called water scooter or jet ski, is a recreational watercraft that a rider sits or stands on, not within, as in a boat.",
     "image":"",
-    "reviews":""
+    "reviews":"",
+    "location":"Beach"
+
   },
   {
-    "item": "Paddle Board",
+    "name": "Paddle Board",
     "price": "99.00",
     "description":"Paddleboarding is a water sport in which participants are propelled by a swimming motion using their arms while lying or kneeling on a paddleboard or surfboard in the ocean or other body of water.",
     "image":"",
-    "reviews":""
+    "reviews":"",
+    "location":"Beach"
+
   },
   {
-    "item": "Skimboard",
+    "name": "Skimboard",
     "price": "25.99",
     "description":"Skimboarding or skimming is a boardsport in which a skimboard is used to glide across the water's surface to meet an incoming breaking wave, and ride it back to shore.",
     "image":"",
-    "reviews":""
+    "reviews":"",
+    "location":"Beach"
+
   },
   {
-    "item": "Body Board",
+    "name": "Body Board",
     "price": "15.00",
     "description":"Bodyboarding is a water sport in which the surfer rides a bodyboard on the crest, face, and curl of a wave which is carrying the surfer towards the shore.",
     "image":"",
-    "reviews":""
+    "reviews":"",
+    "location":"Beach"
+
   },
   {
-    "item": "Life Jaket",
+    "name": "Life Jaket",
     "price": "10.99",
     "description":"personal flotation devices. Their job, as the names imply, is to keep the wearer alive and afloat should they unexpectedly end up in the water or elect to participate in watersports such as skiing or wake surfing",
     "image":"",
-    "reviews":""
+    "reviews":"",
+    "location":"Beach"
+
   },
   {
-    "item": "Swimming Goggles",
+    "name": "Swimming Goggles",
     "price": "7.99",
     "description":"designed glasses to help you see underwater.",
     "image":"",
-    "reviews":""
+    "reviews":"",
+    "location":"Beach"
+
   },
   {
-    "item": "Wet Suit",
+    "name": "Wet Suit",
     "price": "24.99",
     "description":"A wetsuit is a garment worn to provide thermal protection while wet.",
     "image":"",
-    "reviews":""
+    "reviews":"",
+    "location":"Beach"
+
   },
   {
-    "item": "Snorkling Gear",
+    "name": "Snorkling Gear",
     "price": "42.99",
     "description":"Snorkeling gear consists of three main pieces of equipment: a snorkel, a mask, and a set of fins.",
     "image":"",
-    "reviews":""
+    "reviews":"",
+    "location":"Beach"
+
   },
   {
-    "item": "Water Shoes",
+    "name": "Water Shoes",
     "price": "4.99",
     "description":"A water shoe is a type of footwear that is typically used for activities where the feet are likely to become wet, such as kayaking",
     "image":"",
-    "reviews":""
+    "reviews":"",
+    "location":"Beach"
+
   }
 ]

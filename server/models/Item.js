@@ -4,11 +4,11 @@ const itemSchema = new Schema(
   {
     name: {
       type: String,
-      required: true,
+      // required: true,
     },
     location: {
       type: String,
-      required: true,
+      // required: true,
     },
     price: {
       type: Number,
@@ -22,15 +22,15 @@ const itemSchema = new Schema(
     },
     image: {
       type: String,
-      required: true,
+      // required: true,
     },
     inStock: {
       type: Boolean,
       default: false,
     },
-    reviews: {
+    review: {
       type: Schema.Types.ObjectId,
-      ref: "Reviews",
+      ref: "Review",
     },
   },
   {
