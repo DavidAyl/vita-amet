@@ -1,66 +1,67 @@
 [
   {
-    "item": "Snow Pants",
+    "name": "Snow Pants",
     "price": "26.99",
     "description":"Clothing which will help keep your legs warm and dry on the slopes.",
     "image":"",
-    "reviews":""
+    "location":"Snow"
   },
   {
-    "item": "Snow Jacket",
+    "name": "Snow Jacket",
     "price": "35.99",
     "description":"Made to be worn over the rest of the clothes when skiing or snowboarding.",
     "image":"",
-    "reviews":""
+    "location":"Snow"
+
   },
   {
-    "item": "Snow Boots ",
+    "name": "Snow Boots",
     "price": "45.99",
     "description":"A snow boot is a type of boot, generally waterproof or water-resistant.",
-    "image":"",
-    "reviews":""
+    "image": "",
+    "location":"Snow"
   },
   {
-    "item": "Snowboard",
+    "name": "Snowboard",
     "price": "35.00",
     "description":"Snowboards are boards where the user places both feet, usually secured, to the same board. The board itself is wider than most skis, with the ability to glide on snow. ",
     "image":"",
-    "reviews":""
+    "location":"Snow"
   },
   {
-    "item": "Skis",
+    "name": "Skis",
     "price": "25.99",
     "description":"A ski is a narrow strip of semi-rigid material worn underfoot to glide over snow.",
     "image":"",
-    "reviews":""
+    "location":"Snow"
   },
   {
-    "item": "Helmet",
+    "name": "Helmet",
     "price": "5.99",
     "description":"A ski helmet is a helmet specifically designed and constructed for winter sports. ",
     "image":"",
-    "reviews":""
+    "location":"Snow"
   },
   {
-    "item": "Snow Goggles",
+    "name": "Snow Goggles",
     "price": "5.99",
     "description":"Goggles protect your eyes from airborne snow and debris and shield them from hazards such as tree limbs and fallen branches.",
     "image":"",
-    "reviews":""
+    "location":"Snow"
   },
   {
-    "item": "Snowboarding Boots",
+    "name": "Snowboarding Boots",
     "price": "7.99",
     "description":"Unlike ski boots, snowboard boots (soft boots) are not made of plastic, but of less solid composites, fabrics and materials like leather. This is because a lot more flex is needed in a snowboard boot.",
     "image":"",
-    "reviews":""
+    "location":"Snow"
   },
   {
-    "item": "Ski Boots",
+    "name": "Ski Boots",
     "price": "24.99",
     "description":"Ski boots are footwear used in skiing to provide a way to attach the skier to skis using ski bindings. The ski/boot/binding combination is used to effectively transmit control inputs from the skier's legs to the snow.",
     "image":"",
-    "reviews":""
+    "location":"Snow"
   }
   
 ]
