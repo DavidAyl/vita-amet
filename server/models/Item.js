@@ -26,6 +26,7 @@ const itemSchema = new Schema(
     },
     inStock: {
       type: Boolean,
+      default: false,
     },
     reviews: {
       type: Schema.Types.ObjectId,
