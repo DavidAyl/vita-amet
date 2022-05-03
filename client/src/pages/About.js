@@ -12,8 +12,8 @@ const About = () => {
           <div className="row mx-5">
             <div className="col-12 text-center">
               <h2>About Us</h2>
-              <p>
-              Here at Vita Amet we are a company that values the excitement and adventure of any activity you may be partaking in. Our goal is to provide a painless, smooth, renting service to meet any of your activity needs. Our renting service includes a wide variety of activewear, outdoor activity equipment, and other useful equipment and tools that fit your activity needs. As a company we value all our customers and do our best to put the customer's needs first. 
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem voluptate debitis non veritatis iusto! Velit eaque, perferendis distinctio, repudiandae, nesciunt doloribus dolor quis ipsum id iure error expedita facere dolorem!
+              Quaerat nemo repellendus, cupiditate inventore nesciunt quos facere libero tempora quae suscipit ad labore ducimus id officia unde quasi vero laudantium blanditiis dicta expedita voluptate praesentium totam cum iusto! Eligendi?
               </p>
             </div>
           </div>
