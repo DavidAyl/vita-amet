@@ -4,69 +4,70 @@
     "price": "17.99",
     "description":"Trekking poles are a common hiking accessory that function to assist walkers with their rhythm, to provide stability, and reduce strain on joints on rough terrain.",
     "image":"",
-    "reviews":""
+    "location":"Mountain"
+    
   },
   {
     "name": "Satelite Comms",
     "price": "24.99",
     "description":"When you need two-way communication capability and your cell phone will not work, a satellite messaging device is your next best choice. These devices use communication satellites to send an email, SMS or SOS message.",
     "image":"",
-    "reviews":""
+    "location":"Mountain"
   },
   {
     "name": "Handheld GPS ",
     "price": "24.99",
     "description":"A handheld GPS is a device that uses the Global Positioning System, combining modern geographic technology with a portable, user-friendly device for everyday use",
     "image":"",
-    "reviews":""
+    "location":"Mountain"
   },
   {
     "name": "Flashlight",
     "price": "3.00",
     "description":"A flashlight or torch is a portable hand-held electric lamp. ",
     "image":"",
-    "reviews":""
+    "location":"Mountain"
   },
   {
     "name": "Solar Charger",
     "price": "15.99",
     "description":"A solar charger is a charger that employs solar energy to supply electricity to devices or batteries.",
     "image":"",
-    "reviews":""
+    "location":"Mountain"
   },
   {
     "name": "Binoculars",
     "price": "9.99",
     "description":"Binoculars or field glasses are two refracting telescopes mounted side-by-side and aligned to point in the same direction, allowing the viewer to use both eyes when viewing distant objects.",
     "image":"",
-    "reviews":""
+    "location":"Mountain"
   },
   {
     "name": "Headlamp",
     "price": "5.99",
     "description":"Is a light which is designed to be worn on the head.",
     "image":"",
-    "reviews":""
+    "location":"Mountain"
   },
   {
     "name": "Lantern",
     "price": "7.99",
     "description":"A lamp with a transparent case protecting the flame or electric bulb, and typically having a handle by which it can be carried or hung.",
     "image":"",
-    "reviews":""
+    "location":"Mountain"
   },
   {
     "name": "Compass",
     "price": "2.99",
     "description":"A compass is a device that shows the cardinal directions used for navigation and geographic orientation. ",
     "image":"",
-    "reviews":""
+    "location":"Mountain"
   },
   {
-    "name": " General Backpack",
+    "name": "General Backpack",
     "price": "8.99",
     "description":"A backpack—also called knapsack, schoolbag, rucksack, rucksac, pack, sackpack, booksack, bookbag or backsack—is, in its simplest frameless form, a fabric sack carried on one's back and secured with two straps that go over the shoulders, ",
     "image":"",
-    "reviews":""
+    "location":"Mountain"
   }
 ]
