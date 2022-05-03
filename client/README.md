@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Vita-Amet
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of contents
 
-## Available Scripts
+1. [Description](#Description)
+2. [Visuals](#Visuals)
+3. [Installation](#Installation)
+4. [User Story](#Story)
+5. [Technologies](#Technologies)
+6. [Heroku](#Heroku)
+7. [GitHub](#GitHub)
+8. [Creators](#Creators)
+  
 
-In the project directory, you can run:
+---
+## Description
+Chiron is an application created with patient and physician interaction in mind. The application has a user authentication system that allows patients to sign up or login and view their patient portal. Upon signup, the patient will create their login credentials, input contact information, patient history, and give information on lifestyle choices regarding drugs/alcohol. This information is then populated into the patient portal, Chiron Portal. Within the portal, the patient has the ability to schedule an appointment and is taken to a list of doctors to select the doctor they would like to see. 
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
+## Visuals
+![Chiron Portal](/public/images/chiron.png)
+![Chiron Signup](/public/images/chrion-signup.png)
+![Chiron Portal](/public/images/chiron-login.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+---
+## Installation 
+````
+  npm install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  npm run seed
 
-### `yarn build`
+  npm run develop
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+````
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
+## User Story
+````
+AS a patient who wants to make an appointment with my physician of choosing
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+I WANT to able to signup and login onto the Chiron site
 
-### `yarn eject`
+SO THAT I can view all physicians and view my information and make an appointment that is best for me.
+````
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
+## Technologies
+- graphQl
+- bcrypt
+- jquery
+- dotenv
+- mongoose 
+- bootstrap
+- react-bootstap
+- react-icons
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
+## Heroku 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[Heroku Deployed Link ](https://polar-peak-28753.herokuapp.com/)
 
-## Learn More
+---
+## GitHub Repository
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[Vita-Amet Respository Link ](https://github.com/DavidAyl/vita-amet)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
+## Creators
 
-### Code Splitting
+[Michael Hoyle's Linkedin](https://www.linkedin.com/in/michael-hoyle-523143226/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+[Magdalena Perry's Linkedin](https://www.linkedin.com/in/magdalena-perry/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+[Jasmin Bouasavatdy's Linkedin](https://www.linkedin.com/in/jasmin-bouasavatdy-0a9559227/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+[David Aylward's Linkedin](https://www.linkedin.com/in/david-aylward-0a3819230/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Anastasiia Ciloci's Linkedin](http://linkedin.com/in/anastasiia-ciloci-83260b228)
