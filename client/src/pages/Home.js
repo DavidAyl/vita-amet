@@ -36,10 +36,10 @@ const Home = () => {
             {/* jumbotron */}
             <div className="col-md-6">
               <h2>
-                For those who like fun:
+                For those who love adventure
               </h2>
               <p>
-                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                Vita Amet is focused on those who love adventure. Through our rental services you will be able to enjoy outdoor activities without the cost of purchasing equipment.
               </p>
 
               <button type="button" className="btn btn-success mb-5">
@@ -49,7 +49,7 @@ const Home = () => {
 
 
             <div className="col-md-6">
-              <img className="card-img-top" alt="Bootstrap Thumbnail First" src="https://www.layoutit.com/img/people-q-c-600-200-1.jpg" />
+              <img className="card-img-top" alt="Bootstrap Thumbnail First" src="https://grahamcreekpreserve.org/wp-content/uploads/2015/08/walkingbridgeside-600x200_c.jpg" />
             </div>
           </div>
 
@@ -70,7 +70,7 @@ const Home = () => {
                         Pick a Location
                       </h4>
                       <p className="card-text mx-3">
-                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.
+                        With our percisely placed rental locations, seamlessly rent equipment near you. Just select a location to get started.
                       </p>
                     </div>
                   </div>
@@ -89,7 +89,7 @@ const Home = () => {
                         Select your Rentals
                       </h4>
                       <p className="card-text mx-3">
-                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.
+                        With our large selection of equipment, you can find anything you'll need on your adventure.
                       </p>
                     </div>
                   </div>
@@ -109,7 +109,7 @@ const Home = () => {
                         Checkout
                       </h4>
                       <p className="card-text mx-3">
-                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.
+                        Select a payment method that fits you best, we offer a 100% satisfaction guarantee. After payment, you can finally start your journey.
                       </p>
                     </div>
                   </div>
@@ -122,16 +122,16 @@ const Home = () => {
           {/* Quotes for business */}
           <div className="row my-5 mx-5">
             <div className="col-md-6">
-              <img className="card-img-top" alt="Bootstrap Thumbnail First" src="https://www.layoutit.com/img/people-q-c-600-200-1.jpg" />
+              <img className="card-img-top" alt="Bootstrap Thumbnail First" src="https://images.discerningassets.com/image/upload/c_limit,h_600,w_600/v1644186747/Hawaii-20220102-14190_alqzul.jpg" />
             </div>
             <div className="col-md-6">
 
               <blockquote className="blockquote">
-                <p className="mb-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                <p className="mb-0 text-center">
+                  Vita Amet always has what I need, where I need it. There truly is no better experience.
                 </p>
                 <footer className="blockquote-footer my-1">
-                  Someone famous in <cite>Source Title</cite>
+                  Drew Peacock in <cite>Spooner Times</cite>
                 </footer>
               </blockquote>
             </div>
