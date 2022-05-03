@@ -37,7 +37,7 @@ const LocationCards = () => {
                     Mountains
                   </h4>
                   <p className="card-text">
-                    In the Mountains you can find items like Snow Jackets, Snowboards, Skiis, Helmets, and more. All these will enhance the experience you normally get while hiking in the mountains.
+                    In the Mountains you can find items like Snow Jackets, Snowboards, Skiis, Helmets, and more. All these will enhance the experience you normally get while staying in the mountains.
                   </p>
                 </div>
               </div>
