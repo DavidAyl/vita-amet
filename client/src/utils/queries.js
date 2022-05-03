@@ -29,3 +29,17 @@ export const QUERY_ME = gql`
     }
   }
 `;
+
+export const QUERY_ITEMS = gql`
+  query items {
+  items {
+    name
+    price
+    description
+    location
+    _id
+    image
+    inStock
+  }
+}
+`
