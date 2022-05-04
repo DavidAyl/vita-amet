@@ -9,10 +9,10 @@ const Locations = () => {
 
   return (
     <>
-      <main>
-        <h2>Yay! This works, location page is linked.</h2>
+      <main className="col-12 text-center ">
+        <h2 className="card-text mx-3 mb-5">Location</h2>
         <div className="container">
-          <div className="row">
+          <div className="row mb-5">
             {locations.map((location) => (
               <LocationCard {...location} />
             ))}

@@ -7,14 +7,14 @@ const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
 const resolvers = {
   Query: {
+    locations: async () => {
+      return Location.find();
+    },
     items: async () => {
       return Item.find();
     },
     items_by_location: async (_, args) => {
       return Item.find({ location: args.location });
-    },
-    locations: async () => {
-      return Location.find();
     },
     users: async () => {
       return User.find();
@@ -31,11 +31,14 @@ const resolvers = {
     order: async (parent, { _id }, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
+<<<<<<< HEAD
           path: 'orders.item',
           populate: 'location'
+=======
+          path: 'orders.items'
+>>>>>>> main
         });
-
-        return user.orders.id(_id);
+        return user.orders;
       }
 
       throw new AuthenticationError('Not logged in');
@@ -88,9 +91,13 @@ const resolvers = {
       if (context.user) {
         const order = new Order({ items });
 
-        await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
+        const user = await User.findByIdAndUpdate(
+          context.user._id,
+          { $push: { orders: order } },
+          { new: true }
+        ).populate('orders').populate({path: 'orders', populate: 'items' });
 
-        return order;
+        return user.orders.id(order._id);
       }
 
       throw new AuthenticationError('Not logged in');

@@ -32,7 +32,7 @@ const typeDefs = gql`
   type Order {
   _id: ID
   purchaseDate: String
-  itemPurchased: [Item]
+  items: [Item]
   }
 
   type Checkout {
@@ -51,7 +51,7 @@ const typeDefs = gql`
     users: [User]
     user(id: ID!): User
     me: User
-    order(_id: ID!): Order
+    order: [Order]
     checkout(items: [ID]!): Checkout
   }
 
