@@ -14,6 +14,7 @@ import Cart from './pages/Cart';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Location from './pages/Location';
+import NotFound from './pages/NotFound'
 import Rentals from './pages/Rentals'
 import Signup from './pages/Signup';
 import Login from './pages/Login';
@@ -62,6 +63,7 @@ function App() {
             <Route path="/me" element={<Profile />} />
             <Route path="/rentals" element={<Rentals />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
         </>
