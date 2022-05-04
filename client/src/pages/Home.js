@@ -38,7 +38,7 @@ const Home = () => {
               <h2>
                 For those who love adventure
               </h2>
-              <p>
+              <p >
                 Vita Amet is focused on those who love adventure. Through our rental services you will be able to enjoy outdoor activities without the cost of purchasing equipment.
               </p>
               <Link to="/Location">
@@ -129,15 +129,14 @@ const Home = () => {
 
               <blockquote className="blockquote">
                 <p className="mb-0 text-center">
-                  Vita Amet always has what I need, where I need it. There truly is no better experience.
+                  "Vita Amet always has what I need, where I need it. There truly is no better experience."
                 </p>
-                <footer className="blockquote-footer my-1">
+                <footer className="blockquote-footer my-1 text-center">
                   Drew Peacock in <cite>Spooner Times</cite>
                 </footer>
               </blockquote>
             </div>
           </div>
-
           {/* 3 Locations */}
           <LocationCards />
 
