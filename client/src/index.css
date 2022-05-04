@@ -1,3 +1,10 @@
+:root {
+  --lightgreen: #606c38;
+  --darkgreen: #283618;
+  --cream: #fefae0;
+  --lightorange: #dda15e;
+  --darkorange: #bc6c25;
+}
 html, * {
   margin: 0;
   padding: 0;
