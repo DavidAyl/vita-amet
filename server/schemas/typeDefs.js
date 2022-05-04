@@ -4,6 +4,7 @@ const typeDefs = gql`
   type Location {
     _id: ID
     name: String!
+    image: String
   }
   type Review {
     _id: ID
@@ -46,6 +47,7 @@ const typeDefs = gql`
   type Query {
     locations: [Location]
     items: [Item]
+    items_by_location(location: String!): [Item]
     users: [User]
     user(id: ID!): User
     me: User

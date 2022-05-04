@@ -1,11 +1,14 @@
 [
   {
-    "name": "Beach"
-  }, 
+    "name": "Beach",
+    "image": "https://images.fineartamerica.com/images/artworkimages/medium/3/idyllic-beach-az-jackson.jpg"
+  },
   {
-    "name": "Mountain"
-  }, 
+    "name": "Mountain",
+    "image": "https://panoramic.jason.photography/wp-content/uploads/2022/01/Aiguille-du-midi-chamonix-alps-mountains-france-600x200.jpg"
+  },
   {
-    "name": "Snow"
+    "name": "Forest",
+    "image": "https://envato-shoebox-0.imgix.net/0223/e4c5-3c46-4bd3-99e5-9d8811c8a867/DSC03562-Edit-2.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=600&s=95cd70f24dba0099af0261dfb4be920b"
   }
 ]

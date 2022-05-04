@@ -1,12 +1,17 @@
+
 const { AuthenticationError } = require('apollo-server-express');
 const { User, Item, Location, Order } = require('../models');
 const { signToken } = require('../utils/auth');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
+
 const resolvers = {
   Query: {
     items: async () => {
       return Item.find();
+    },
+    items_by_location: async (_, args) => {
+      return Item.find({ location: args.location });
     },
     locations: async () => {
       return Location.find();
@@ -21,7 +26,7 @@ const resolvers = {
       if (context.user) {
         return User.findOne({ _id: context.user._id });
       }
-      throw new AuthenticationError('You need to be logged in!');
+      throw new AuthenticationError("You need to be logged in!");
     },
     order: async (parent, { _id }, context) => {
       if (context.user) {
@@ -94,20 +99,20 @@ const resolvers = {
       const user = await User.findOne({ email });
 
       if (!user) {
-        throw new AuthenticationError('No user found with this email address');
+        throw new AuthenticationError("No user found with this email address");
       }
 
       const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
-        throw new AuthenticationError('Incorrect credentials');
+        throw new AuthenticationError("Incorrect credentials");
       }
 
       const token = signToken(user);
 
       return { token, user };
-    }
-  }
+    },
+  },
 };
 
 module.exports = resolvers;
