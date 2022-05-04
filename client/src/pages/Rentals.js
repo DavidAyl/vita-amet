@@ -3,7 +3,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { QUERY_ITEMS_BY_LOCATION, QUERY_ITEMS } from "../utils/queries";
-import ItemCard from "../components/UserList/ItemCard";
+import ItemCard from "../components/ItemCard/ItemCard";
 
 
 
