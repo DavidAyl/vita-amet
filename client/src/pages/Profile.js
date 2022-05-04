@@ -4,7 +4,7 @@ import { Navigate, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 // Utilities
 import Auth from "../utils/auth";
-import { QUERY_USERS, QUERY_USER, QUERY_ME } from "../utils/queries";
+import { QUERY_USERS, QUERY_USER, QUERY_ME, QUERY_ORDER } from "../utils/queries";
 // Components
 import UserList from "../components/UserList";
 import Avatar from "../assets/avatar.png";
@@ -25,8 +25,12 @@ const Profile = () => {
     variables: { id },
   });
 
+  const { loading: orderLoading, data: orderData, error: orderError } = useQuery(QUERY_ORDER);
+
+  const orders = orderData?.order || [];
+
   // Get a list of all users
-  const { usersLoading, data: usersData } = useQuery(QUERY_USERS);
+  const { loading: usersLoading, data: usersData } = useQuery(QUERY_USERS);
 
   const user = data?.me || data?.user || {};
   const users = usersData?.users || [];
@@ -106,6 +110,19 @@ const Profile = () => {
         <div>
           {renderCurrentUserInfo()}
           {renderUserList()}
+        </div>
+        <div>
+          <h2>Previous Orders</h2>
+          {orders.map((order) => <div>
+            <h4>{order.purchaseDate}</h4>
+              {order.items.map(item=>
+                <ul>
+                  <li>{item.name}</li>
+                  <li>{item.price}</li>
+                  <li>{item.image}</li>
+                </ul>
+              )}
+          </div>)}
         </div>
       </main>
     </>

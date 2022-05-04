@@ -68,8 +68,8 @@ export const QUERY_LOCATION = gql`
 `;
 
 export const QUERY_ORDER = gql`
-query order($id: ID!) {
-  order(_id: $id) {
+query order {
+  order {
     _id
     purchaseDate
     items {
