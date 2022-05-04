@@ -11,7 +11,7 @@ html, * {
   box-sizing: border-box;
 }
 
-h5 {
+h5{
   letter-spacing: 10px;
   
 }
@@ -19,5 +19,8 @@ h5 {
 main {
   margin-top: 100px;
 }
-
+.navBrand {
+  letter-spacing: 10px;
+  text-transform:uppercase;
+}
 

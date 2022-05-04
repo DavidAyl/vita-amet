@@ -52,6 +52,7 @@ function Navbar() {
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
             >
+              
               <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul>
 
               {/* <!-- Icons --> */}
@@ -119,11 +120,11 @@ function Navbar() {
         {/* <!-- Container wrapper --> */}
         <div className="container-fluid">
           {/* <!-- Navbar brand --> */}
-          <Link className="navbar-brand" to="/">
-            Vita Amet
+          <Link className="navbar-brand " to="/">
+           <span className="navBrand ms-3 fs-2">Vita Amet</span> 
           </Link>
 
-          {/* <!-- Toggle button --> */}
+          {/* <!-- Hamburger button --> */}
           <button
             className="navbar-toggler border-0"
             type="button"
@@ -133,8 +134,10 @@ function Navbar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
+                    
             <FaBars />
           </button>
+          
 
           {/* <!-- Collapsible wrapper --> */}
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
