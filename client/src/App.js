@@ -9,17 +9,19 @@ import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import About from "./pages/About";
-import Cart from "./pages/Cart";
-import Contact from "./pages/Contact";
-import Home from "./pages/Home";
-import Location from "./pages/Location";
-import Rentals from "./pages/Rentals";
-import Signup from "./pages/Signup";
-import Login from "./pages/Login";
-import Profile from "./pages/Profile";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import About from './pages/About';
+import Cart from './pages/Cart';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
+import Location from './pages/Location';
+import NotFound from './pages/NotFound'
+import Rentals from './pages/Rentals'
+import Signup from './pages/Signup';
+import Login from './pages/Login';
+import Profile from './pages/Profile';
+import Header from './components/Header';
+import Footer from './components/Footer';
+
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -63,6 +65,7 @@ function App() {
             <Route path="/rentals" element={<Rentals />} />
             <Route path="/rentals/:location" element={<Rentals />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
         </>
