@@ -32,7 +32,7 @@ const typeDefs = gql`
   type Order {
   _id: ID
   purchaseDate: String
-  itemPurchased: [Item]
+  items: [Item]
   }
 
   type Checkout {
