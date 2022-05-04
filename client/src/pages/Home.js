@@ -39,8 +39,10 @@ const Home = () => {
                 For those who love adventure
               </h2>
               <p >
-                Vita Amet is focused on those who love adventure. Through our rental services you will be able to enjoy outdoor activities without the cost of purchasing equipment.
+                Vita Amet is focused on those who love adventure. 
               </p>
+              
+              <p>Through our rental services you will be able to enjoy outdoor activities without the cost of purchasing equipment.</p>
               <Link to="/Location">
                 <button type="button" className="btn btn-success mb-5">
                   Locations
