@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const QUERY_USERS = gql`
   query users {
@@ -32,14 +32,36 @@ export const QUERY_ME = gql`
 
 export const QUERY_ITEMS = gql`
   query items {
-  items {
-    name
-    price
-    description
-    location
-    _id
-    image
-    inStock
+    items {
+      name
+      price
+      description
+      location
+      _id
+      image
+      inStock
+    }
   }
-}
-`
+`;
+
+export const QUERY_ITEMS_BY_LOCATION = gql`
+  query items_by_location($location: String!) {
+    items_by_location(location: $location) {
+      name
+      price
+      description
+      location
+      _id
+      image
+      inStock
+    }
+  }
+`;
+export const QUERY_LOCATION = gql`
+  query locations {
+    locations {
+      name
+      image
+    }
+  }
+`;

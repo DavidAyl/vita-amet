@@ -5,6 +5,9 @@ const locationSchema = new Schema({
     type: String,
     required: true,
   },
+  image: {
+    type: String,
+  },
   items: [
     {
       type: Schema.Types.ObjectId,
