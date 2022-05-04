@@ -31,7 +31,7 @@ const resolvers = {
     order: async (parent, { _id }, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
-          path: 'orders.items',
+          path: 'orders.item',
           populate: 'location'
         });
 
