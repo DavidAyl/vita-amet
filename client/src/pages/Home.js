@@ -1,32 +1,32 @@
 // Node Modules
 import React from 'react';
-import { useQuery } from '@apollo/client';
+// import { useQuery } from '@apollo/client';
 // Utilities
-import Auth from '../utils/auth';
-import { QUERY_USERS } from '../utils/queries';
+// import Auth from '../utils/auth';
+// import { QUERY_USERS } from '../utils/queries';
 // Components
-import UserList from '../components/UserList';
+// import UserList from '../components/UserList';
 import { FaLocationArrow, FaRegCheckCircle, FaShoppingCart } from 'react-icons/fa';
 import LocationCards from '../components/LocationCards';
 
 import { Link } from 'react-router-dom';
 
 const Home = () => {
-  const { loading, data } = useQuery(QUERY_USERS);
-  const users = data?.users || [];
+  // const { loading, data } = useQuery(QUERY_USERS);
+  // const users = data?.users || [];
 
-  const renderUserList = () => {
-    if (loading) {
-      return <h2>Loading...</h2>
-    } else {
-      return <UserList users={users} title="List of Users" />
-    }
-  }
+  // const renderUserList = () => {
+  //   if (loading) {
+  //     return <h2>Loading...</h2>
+  //   } else {
+  //     return <UserList users={users} title="List of Users" />
+  //   }
+  // }
 
-  const renderUsername = () => {
-    if (!Auth.loggedIn()) return null;
-    return Auth.getProfile().data.username;
-  }
+  // const renderUsername = () => {
+  //   if (!Auth.loggedIn()) return null;
+  //   return Auth.getProfile().data.username;
+  // }
 
   return (
     <>
@@ -144,13 +144,13 @@ const Home = () => {
 
         </div>
       </main>
-
+{/* 
       <div>
         {renderUsername()}
       </div>
       <div>
         {renderUserList()}
-      </div>
+      </div> */}
 
     </>
 
