@@ -106,13 +106,9 @@ const resolvers = {
           context.user._id,
           { $push: { orders: order } },
           { new: true }
-<<<<<<< HEAD
-        ).populate('orders').populate({ path: 'orders', populate: 'items' });
-=======
         )
           .populate("orders")
           .populate({ path: "orders", populate: "items" });
->>>>>>> main
 
         return user.orders.id(order._id);
       }
