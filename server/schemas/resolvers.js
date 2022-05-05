@@ -31,12 +31,7 @@ const resolvers = {
     order: async (parent, { _id }, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
-<<<<<<< HEAD
-          path: 'orders.item',
-          populate: 'location'
-=======
           path: 'orders.items'
->>>>>>> main
         });
         return user.orders;
       }
@@ -95,7 +90,7 @@ const resolvers = {
           context.user._id,
           { $push: { orders: order } },
           { new: true }
-        ).populate('orders').populate({path: 'orders', populate: 'items' });
+        ).populate('orders').populate({ path: 'orders', populate: 'items' });
 
         return user.orders.id(order._id);
       }
