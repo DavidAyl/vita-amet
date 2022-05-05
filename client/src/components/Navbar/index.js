@@ -7,7 +7,7 @@ import Auth from "../../utils/auth";
 // import Alert from 'react-bootstrap/Alert'
 
 
-  
+
 function Navbar() {
   const logout = (event) => {
     event.preventDefault();
@@ -17,17 +17,18 @@ function Navbar() {
   if (Auth.loggedIn()) {
     return (
       <>
-        <Link to="/me">{Auth.getProfile().data.username}'s profile</Link>
-        <button onClick={logout}>Logout</button>
-
+        {/* <Link to="/me">{Auth.getProfile().data.username}'s profile</Link>
+        <button onClick={logout}>Logout</button> */}
         {/* <!-- Navbar --> */}
         <nav className="navbar navbar-expand-lg bg-light navbar-light fixed-top py-5">
           {/* <!-- Container wrapper --> */}
           <div className="container-fluid">
             {/* <!-- Navbar brand --> */}
-            <Link className="navbar-brand logo"  to="/">
-            <span className="navBrand ms-3 fs-2">Vita Amet</span> 
 
+
+            <Link className="navbar-brand logo" to="/">
+              <img src={Logo} alt="logo" height="50px" />
+              <span className="navBrand ms-3 fs-2">Vita Amet</span>
             </Link>
 
             {/* <!-- Toggle button --> */}
@@ -48,7 +49,7 @@ function Navbar() {
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
             >
-              
+
               <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul>
 
               {/* <!-- Icons --> */}
@@ -108,17 +109,17 @@ function Navbar() {
   // If logged out show login controls
   return (
     <>
-      <Link to="/login">Login</Link>
-      <Link to="/signup">Signup</Link>
+      {/* <Link to="/login">Login</Link>
+      <Link to="/signup">Signup</Link> */}
 
       {/* <!-- Navbar --> */}
       <nav className="navbar navbar-expand-lg bg-light navbar-light fixed-top py-5">
         {/* <!-- Container wrapper --> */}
         <div className="container-fluid">
           {/* <!-- Navbar brand --> */}
-          <img src={Logo}/>
           <Link className="navbar-brand " to="/">
-           <span className="navBrand ms-3 fs-2">Vita Amet</span> 
+            <img src={Logo} alt="logo" height="50px" />
+            <span className="navBrand ms-3 fs-2">Vita Amet</span>
           </Link>
           {/* <!-- Hamburger button --> */}
           <button
@@ -130,10 +131,10 @@ function Navbar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-                    
+
             <FaBars />
           </button>
-          
+
 
           {/* <!-- Collapsible wrapper --> */}
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
