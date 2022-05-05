@@ -8,11 +8,11 @@ import Auth from "../../utils/auth";
 
 const styles = {
   logo: {
-    fontFamily: "'Kaushan Script', cursive",
-    fontSize: "40px",
-    paddingLeft: "50px",
-  },
-};
+    letterSpacing: '10px',
+    textTransform:'uppercase'
+  }
+  }
+  
 function Navbar() {
   const logout = (event) => {
     event.preventDefault();
@@ -30,8 +30,9 @@ function Navbar() {
           {/* <!-- Container wrapper --> */}
           <div className="container-fluid">
             {/* <!-- Navbar brand --> */}
-            <Link className="navbar-brand logo" style={styles.logo} to="/">
-              Vita Amet
+            <Link className="navbar-brand logo"  to="/">
+            <span className="navBrand ms-3 fs-2">Vita Amet</span> 
+
             </Link>
 
             {/* <!-- Toggle button --> */}

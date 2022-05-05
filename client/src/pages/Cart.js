@@ -1,7 +1,8 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
 import { QUERY_CART } from "../utils/queries";
-import ItemCard from "../components/ItemCard/ItemCard";
+// import ItemCard from "../components/ItemCard/ItemCard";
+import CartItem from "../components/CartItem";
 
 const Cart = () => {
   const { data } = useQuery(QUERY_CART);
@@ -16,7 +17,7 @@ const Cart = () => {
         <div className="container">
           <div className="row">
             {items.map((item) => (
-              <ItemCard {...item} />
+              <CartItem {...item} />
             ))}
           </div>
         </div>
