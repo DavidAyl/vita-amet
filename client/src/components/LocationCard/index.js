@@ -6,7 +6,7 @@ const LocationCard = (location) => {
     <>
       <Link
         className="nav-link col-md-4 text-secondary text-center"
-        to={"/rentals"}
+        to={"/rentals/" + location.name}
       >
         <div className="card border-0">
           <img
