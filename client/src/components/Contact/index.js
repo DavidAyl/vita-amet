@@ -47,32 +47,32 @@ function ContactComponent(props) {
 
                     <div className="row">
                       <div className="col-md-6">
-                        <div className="form-group">
-                          <label htmlFor="form_name" className='m-2'>Firstname *</label>
-                          <input id="form_name" type="text" name="first_name" className="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required."></input>
+                        <div className="form-group mt-3">
+                          {/* <label htmlFor="form_name" className='m-2'>First Name</label> */}
+                          <input id="form_name" type="text" name="first_name" className="form-control" placeholder="First Name" required="required" data-error="Firstname is required."></input>
 
                         </div>
                       </div>
                       <div className="col-md-6">
-                        <div className="form-group">
-                          <label htmlFor="form_lastname" className='m-2'>Lastname *</label>
-                          <input id="form_lastname" type="text" name="last_name" className="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required."></input>
+                        <div className="form-group mt-3">
+                          {/* <label htmlFor="form_lastname" className='m-2'>Lastname *</label> */}
+                          <input id="form_lastname" type="text" name="last_name" className="form-control" placeholder="Last Name" required="required" data-error="Lastname is required."></input>
                         </div>
                       </div>
                     </div>
                     <div className="row">
-                      <div className="col-md-6">
+                      <div className="col-md-12">
                         <div className="form-group">
-                          <label htmlFor="form_email" className='m-2'>Email *</label>
-                          <input id="form_email" type="email" name="email" className="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required."></input>
+                          {/* <label htmlFor="form_email" className='m-2'>Email *</label> */}
+                          <input id="form_email" type="email" name="email" className="form-control mt-3" placeholder="Email" required="required" data-error="Valid email is required."></input>
 
                         </div>
                       </div>
-                      <div className="col-md-6">
-                        <div className="form-group">
-                          <label htmlFor="form_need" className='m-2'>Please specify your need *</label>
+                      <div className="col-md-12">
+                        <div className="form-group mt-3">
+                          <label htmlFor="form_need" className='m-2'>Reason for contact</label>
                           <select id="form_need" name="specific_need" className="form-control" required="required" data-error="Please specify your need.">
-                            <option value="" defaultValue disabled>--Select Your Issue--</option>
+                            <option value="" defaultValue>--Select Your Issue--</option>
                             <option >Request Invoice For order</option>
                             <option >Request order status</option>
                             <option >Haven't received cashback yet</option>
@@ -83,17 +83,17 @@ function ContactComponent(props) {
                       </div>
                     </div>
                     <div className="row">
-                      <div className="col-md-12">
+                      <div className="col-md-12 mt-2">
                         <div className="form-group">
-                          <label htmlFor="form_message" className='m-2'>Message *</label>
-                          <textarea id="form_message" name="message" className="form-control" placeholder="Write your message here." rows="4" required="required" data-error="Please, leave us a message."></textarea
+                          {/* <label htmlFor="form_message" className='m-2'>Message *</label> */}
+                          <textarea id="form_message" name="message" className="form-control mt-3" placeholder="Write your message here." rows="4" required="required" data-error="Please, leave us a message."></textarea
                           >
                         </div>
 
                       </div>
 
 
-                      <div className="col-md-12">
+                      <div className="col-md-12 text-end">
 
                         <input type="submit" className="btn btn-success btn-send  pt-2 btn-block mt-3
                       " value="Send Message"></input>
