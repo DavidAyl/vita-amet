@@ -18,7 +18,7 @@ const ItemCard = ({ item }) => {
   const { cart } = state;
 
   const [hasBeenAdded, setHasBeenAdded] = useState(false);
-  useEffect(() => {});
+  useEffect(() => { });
   const itemAdded = () => ({ display: hasBeenAdded ? "block" : "none" });
 
   const addToCart = () => {
@@ -29,7 +29,7 @@ const ItemCard = ({ item }) => {
         _id: _id,
         purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
       });
-      idbPromise("cart", "put", {  
+      idbPromise("cart", "put", {
         ...itemInCart,
         purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
       });
@@ -47,8 +47,8 @@ const ItemCard = ({ item }) => {
     <div className="card col-lg-3 text-center mb-3 rounded border-0">
       {/* <img alt="Bootstrap Image Preview" src={item.image} /> */}
       <img
-        className="img-fluid mt-3 rounded mx-3"
-        src="http://via.placeholder.com/200"
+        className="img-fluid mt-3 rounded mx-3 h-25"
+        src={`http://drive.google.com/uc?export=view&id=${item.image}`}
         alt=""
       ></img>
       <h4 className="text-uppercase fs-5 mt-4">{item.name}</h4>
