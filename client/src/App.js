@@ -22,6 +22,7 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Success from "./pages/Success"
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -67,6 +68,7 @@ function App() {
               <Route path="/rentals/:location" element={<Rentals />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="*" element={<NotFound />} />
+              <Route path="/success" element={<Success />} />
             </Routes>
             <Footer />
           </StoreProvider>
