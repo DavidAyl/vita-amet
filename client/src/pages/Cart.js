@@ -8,6 +8,7 @@ import CartItem from "../components/CartItem";
 import Auth from "../utils/auth";
 import { useStoreContext } from "../utils/GlobalState";
 import { ADD_MULTIPLE_TO_CART } from "../utils/actions";
+import { Link } from "react-router-dom";
 
 const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 
@@ -72,13 +73,21 @@ const Cart = () => {
                 {state.cart.map((item) => (
                   <CartItem key={item._id} item={item} />
                 ))}
-                <div className="flex-row space-between">
+                <div className="flex-row space-between text-end">
                   <strong>Total: ${calculateTotal()}</strong>
 
                   {Auth.loggedIn() ? (
                     <button onClick={submitCheckout}>Checkout</button>
                   ) : (
-                    <span>(log in to check out)</span>
+                      <div className="text-end">
+                      <Link to="/Login">
+                        <button 
+                        type="click" 
+                        className="text-end btn btn-warning text-dark mb-5 px-2">
+                          Login to checkout
+                        </button>
+                      </Link>
+                      </div>
                   )}
                 </div>
               </div>

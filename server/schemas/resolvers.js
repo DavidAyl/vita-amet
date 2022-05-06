@@ -76,8 +76,8 @@ const resolvers = {
   Mutation: {
     addUser: async (_, args) => {
       const user = await User.create(args);
-      const cart = { userId: user._id, items: [] };
-      await Cart.create(cart);
+      // const cart = { userId: user._id, items: [] };
+      // await Cart.create(cart);
       const token = signToken(user);
       return { token, user };
     },

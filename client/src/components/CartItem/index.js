@@ -50,7 +50,7 @@ const CartItem = ({ item }) => {
               <div className="col-lg-5">
                 <p>{item.description}</p>
               </div>
-              <span>Qty:</span>
+              <span className="mt-2">Qty:</span>
               <input
                 type="number"
                 placeholder="1"
@@ -58,7 +58,7 @@ const CartItem = ({ item }) => {
                 onChange={onChange}
               />
               <button
-                className="btn btn-success mb-5"
+                className="btn btn-warning mb-5 mt-2 col-sm-3"
                 onClick={() => removeFromCart(item)}
               >
                 Remove
