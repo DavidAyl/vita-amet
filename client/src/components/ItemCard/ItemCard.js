@@ -29,7 +29,7 @@ const ItemCard = ({ item }) => {
         _id: _id,
         purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
       });
-      idbPromise("cart", "put", {
+      idbPromise("cart", "put", {  
         ...itemInCart,
         purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
       });
@@ -39,6 +39,7 @@ const ItemCard = ({ item }) => {
         product: { ...item, purchaseQuantity: 1 },
       });
       idbPromise("cart", "put", { ...item, purchaseQuantity: 1 });
+      setHasBeenAdded(true);
     }
   };
 
