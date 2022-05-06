@@ -1,5 +1,5 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { User, Item, Location, Order } = require("../models");
+const { User, Item, Location, Order, Cart } = require("../models");
 const { signToken } = require("../utils/auth");
 const stripe = require("stripe")("sk_test_4eC39HqLyjWDarjtT1zdp7dc");
 
@@ -79,6 +79,14 @@ const resolvers = {
 
       const token = signToken(user);
       return { token, user };
+    },
+    clearCart: async (parent, args, context) => {
+      if (context.user) {
+        const cart = await Cart.deleteOne({ userId: context.user._id });
+        console.log('CART', cart)
+        return "Success!";
+      }
+      throw new AuthenticationError("Not logged in");
     },
     addOrder: async (parent, { items }, context) => {
       console.log(context);

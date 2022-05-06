@@ -18,7 +18,7 @@ const ItemCard = ({ item }) => {
   const { cart } = state;
 
   const [hasBeenAdded, setHasBeenAdded] = useState(false);
-  useEffect(() => {});
+  useEffect(() => { });
   const itemAdded = () => ({ display: hasBeenAdded ? "block" : "none" });
 
   const addToCart = () => {
@@ -29,7 +29,7 @@ const ItemCard = ({ item }) => {
         _id: _id,
         purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
       });
-      idbPromise("cart", "put", {  
+      idbPromise("cart", "put", {
         ...itemInCart,
         purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
       });
@@ -47,9 +47,11 @@ const ItemCard = ({ item }) => {
     <div className="card col-lg-3 text-center mb-3 rounded border-0">
       {/* <img alt="Bootstrap Image Preview" src={item.image} /> */}
       <img
-        className="img-fluid mt-3 rounded mx-3"
-        src="http://via.placeholder.com/200"
-        alt="item"
+
+        className="img-fluid mt-3 rounded mx-3 h-25"
+        src={`http://drive.google.com/uc?export=view&id=${item.image}`}
+        alt=""
+
       ></img>
       <h4 className="text-uppercase fs-5 mt-4">{item.name}</h4>
       <div className=" my-2 px-2">
@@ -57,7 +59,7 @@ const ItemCard = ({ item }) => {
         <div className="" style={styles.desc}>
           <p>{item.description}</p>
         </div>
-        <button className="btn btn-success mb-5" onClick={addToCart}>
+        <button className="btn btn-success mt-3 mb-5" onClick={addToCart}>
           Add to cart
         </button>
 
