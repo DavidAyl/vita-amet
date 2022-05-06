@@ -2,12 +2,10 @@ import React from "react";
 import { FaBars, FaShoppingCart, FaUserCircle } from "react-icons/fa";
 // import { FaShoppingCart } from 'react-icons/fa';
 import { Link } from "react-router-dom";
-import Logo from "../../assets/logo192.png"
+import Logo from "../../assets/logo192.png";
 import Auth from "../../utils/auth";
 // import Alert from 'react-bootstrap/Alert'
 
-
-  
 function Navbar() {
   const logout = (event) => {
     event.preventDefault();
@@ -25,9 +23,8 @@ function Navbar() {
           {/* <!-- Container wrapper --> */}
           <div className="container-fluid">
             {/* <!-- Navbar brand --> */}
-            <Link className="navbar-brand logo"  to="/">
-            <span className="navBrand ms-3 fs-2">Vita Amet</span> 
-
+            <Link className="navbar-brand logo" to="/">
+              <span className="navBrand ms-3 fs-2">Vita Amet</span>
             </Link>
 
             {/* <!-- Toggle button --> */}
@@ -48,7 +45,6 @@ function Navbar() {
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
             >
-              
               <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul>
 
               {/* <!-- Icons --> */}
@@ -116,9 +112,9 @@ function Navbar() {
         {/* <!-- Container wrapper --> */}
         <div className="container-fluid">
           {/* <!-- Navbar brand --> */}
-          <img src={Logo}/>
+          {/* <img src={Logo}/> */}
           <Link className="navbar-brand " to="/">
-           <span className="navBrand ms-3 fs-2">Vita Amet</span> 
+            <span className="navBrand ms-3 fs-2">Vita Amet</span>
           </Link>
           {/* <!-- Hamburger button --> */}
           <button
@@ -130,10 +126,8 @@ function Navbar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-                    
             <FaBars />
           </button>
-          
 
           {/* <!-- Collapsible wrapper --> */}
           <div className="collapse navbar-collapse" id="navbarSupportedContent">

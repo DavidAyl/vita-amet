@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const LocationCard = (location) => {
+const LocationCard = ({ location }) => {
   return (
     <>
       <Link

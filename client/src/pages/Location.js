@@ -14,7 +14,7 @@ const Locations = () => {
         <div className="container">
           <div className="row mb-5">
             {locations.map((location) => (
-              <LocationCard {...location} />
+              <LocationCard key={location._id} location={location} />
             ))}
           </div>
         </div>

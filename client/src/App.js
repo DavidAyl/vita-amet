@@ -6,6 +6,7 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
+import { StoreProvider } from "./utils/GlobalState";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -51,22 +52,24 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <>
-          <Header />
-          <Routes>
-            <Route path="/about" element={<About />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/" element={<Home />} />
-            <Route path="/location" element={<Location />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/users/:id" element={<Profile />} />
-            <Route path="/me" element={<Profile />} />
-            <Route path="/rentals" element={<Rentals />} />
-            <Route path="/rentals/:location" element={<Rentals />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-          <Footer />
+          <StoreProvider>
+            <Header />
+            <Routes>
+              <Route path="/about" element={<About />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/location" element={<Location />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/users/:id" element={<Profile />} />
+              <Route path="/me" element={<Profile />} />
+              <Route path="/rentals" element={<Rentals />} />
+              <Route path="/rentals/:location" element={<Rentals />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+            <Footer />
+          </StoreProvider>
         </>
       </Router>
     </ApolloProvider>
