@@ -58,36 +58,6 @@ export const QUERY_ITEMS_BY_LOCATION = gql`
   }
 `;
 
-export const QUERY_CART = gql`
-  query cart {
-    cart {
-      _id
-      items {
-        _id
-        name
-        price
-        description
-        image
-      }
-    }
-  }
-`;
-
-export const QUERY_CARTS = gql`
-  query carts {
-    carts {
-      _id
-      items {
-        _id
-        name
-        price
-        description
-        image
-      }
-    }
-  }
-`;
-
 export const QUERY_LOCATION = gql`
   query locations {
     locations {
@@ -107,6 +77,14 @@ export const QUERY_ORDER = gql`
         price
         image
       }
+    }
+  }
+`;
+
+export const QUERY_CHECKOUT = gql`
+  query getCheckout($items: [ID]!) {
+    checkout(items: $items) {
+      session
     }
   }
 `;

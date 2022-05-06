@@ -1,71 +1,72 @@
-// import { useMutation } from "@apollo/client";
 import React from "react";
-// import { ADD_CART_ITEM } from "../../utils/mutations";
-// Import Link component for all internal application hyperlinks
-// import { Link } from 'react-router-dom';
-// const styles = {
-//   desc: {
-//     height: "120px",
-//     overflow: "scroll",
-//   },
-// };
+import { useStoreContext } from "../../utils/GlobalState";
+import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
+import { idbPromise } from "../../utils/helpers";
 
-const CartItem = (item) => {
-  // const id = item._id;
+const CartItem = ({ item }) => {
+  const [, dispatch] = useStoreContext();
 
-  // const [addItemToCart, { error }] = useMutation(ADD_CART_ITEM);
+  const removeFromCart = (item) => {
+    dispatch({
+      type: REMOVE_FROM_CART,
+      _id: item._id,
+    });
+    idbPromise("cart", "delete", { ...item });
+  };
 
-  // const addToCart = async (event) => {
-  //   console.log("addtocart");
-  //   event.preventDefault();
-  //   try {
-  //     const { data } = await addItemToCart({ variables: { itemId: id } });
-  //     console.log(data);
-  //   } catch (err) {
-  //     console.error(error);
-  //   }
-  // };
+  const onChange = (e) => {
+    const value = e.target.value;
+    if (value === "0") {
+      dispatch({
+        type: REMOVE_FROM_CART,
+        _id: item._id,
+      });
+      idbPromise("cart", "delete", { ...item });
+    } else {
+      dispatch({
+        type: UPDATE_CART_QUANTITY,
+        _id: item._id,
+        purchaseQuantity: parseInt(value),
+      });
+      idbPromise("cart", "put", { ...item, purchaseQuantity: parseInt(value) });
+    }
+  };
 
   return (
-<>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-12 card mb-5 pt-5 mx-3 px-2">
-            <div class="row">
-              <div class="col-lg-3">
-                <img 
-                alt={item.name} 
-                src= "http://via.placeholder.com/200" />
-                <div class="row">
-                  <div class="col-lg-12">
-                    <p>{item.name}</p>        
+    <>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-lg-12 card mb-5 pt-5 mx-3 px-2">
+            <div className="row">
+              <div className="col-lg-3">
+                <img alt={item.name} src="http://via.placeholder.com/200" />
+                <div className="row">
+                  <div className="col-lg-12">
+                    <p>{item.name}</p>
                     <p className="text-success fw-bold px-1">${item.price}</p>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-5">
-              <p>{item.description}</p>
+              <div className="col-lg-5">
+                <p>{item.description}</p>
               </div>
+              <span>Qty:</span>
+              <input
+                type="number"
+                placeholder="1"
+                value={item.purchaseQuantity}
+                onChange={onChange}
+              />
+              <button
+                className="btn btn-success mb-5"
+                onClick={() => removeFromCart(item)}
+              >
+                Remove
+              </button>
             </div>
           </div>
         </div>
       </div>
-
-
-    {/* <div className="card col-12 text-center mb-3 rounded border-0" > */}
-      {/* <img alt="Bootstrap Image Preview" src={item.image} /> */}
-      {/* <img
-        className="img-fluid mt-3 rounded mx-3 col-3"
-        src="http://via.placeholder.com/200"
-        alt=""
-        style={styles.desc}
-      ></img>
-      <h4 className="text-uppercase fs-5 mt-4">{item.name}</h4>
-      <div className=" my-2 px-2">
-        <p className="text-success fw-bold px-1">${item.price}</p>
-      </div>
-  
-    </div> */}
     </>
   );
 };

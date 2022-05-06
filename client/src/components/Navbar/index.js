@@ -2,11 +2,9 @@ import React from "react";
 import { FaBars, FaShoppingCart, FaUserCircle } from "react-icons/fa";
 // import { FaShoppingCart } from 'react-icons/fa';
 import { Link } from "react-router-dom";
-import Logo from "../../assets/logo192.png"
+import Logo from "../../assets/logo192.png";
 import Auth from "../../utils/auth";
 // import Alert from 'react-bootstrap/Alert'
-
-
 
 function Navbar() {
   const logout = (event) => {
@@ -28,6 +26,7 @@ function Navbar() {
 
             <Link className="navbar-brand logo" to="/">
               <img src={Logo} alt="logo" height="50px" />
+                
               <span className="navBrand ms-3 fs-2">Vita Amet</span>
             </Link>
 
@@ -117,8 +116,10 @@ function Navbar() {
         {/* <!-- Container wrapper --> */}
         <div className="container-fluid">
           {/* <!-- Navbar brand --> */}
+
           <Link className="navbar-brand " to="/">
             <img src={Logo} alt="logo" height="50px" />
+
             <span className="navBrand ms-3 fs-2">Vita Amet</span>
           </Link>
           {/* <!-- Hamburger button --> */}
@@ -131,6 +132,7 @@ function Navbar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
+
 
             <FaBars />
           </button>
