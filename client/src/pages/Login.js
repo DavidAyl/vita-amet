@@ -9,9 +9,7 @@ const styles = {
   container: {
     // marginTop: "100px",
   },
-  main: {
-    height: "750px"
-  }
+
 }
 
 const Login = () => {

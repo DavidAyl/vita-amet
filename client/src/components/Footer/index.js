@@ -8,15 +8,19 @@ import { FaMapMarkerAlt } from 'react-icons/fa'
 
 const styles = {
   footer: {
+    // position: "absolute",
     bottom: 0,
     width: "100%",
+    opacity: "0.9", 
+    
   },
   rightBtn: {
     textAlign: "right",
   },
   textLeft: {
     textAlign: "left",
-  }
+  },
+
 }
 
 const Footer = () => {
@@ -109,21 +113,21 @@ const Footer = () => {
             </div>
 
             <div className="col-lg-4 col-md-6 mb-4 mb-md-0">
-              <h5 className="text-uppercase mb-4 text-center" style={styles.h5}>Opening hours</h5>
+              <h5 className="text-uppercase mb-4 text-center" style={styles.h5}>Hours</h5>
 
               <table className="table text-center text-white">
                 <tbody className="fw-normal">
                   <tr>
                     <td>Mon - Thu:</td>
-                    <td>8am - 9pm</td>
+                    <td>8am - 6pm</td>
                   </tr>
                   <tr>
                     <td>Fri - Sat:</td>
-                    <td>8am - 1am</td>
+                    <td>9am - 6pm</td>
                   </tr>
                   <tr>
                     <td>Sunday:</td>
-                    <td>9am - 10pm</td>
+                    <td>10am - 6pm</td>
                   </tr>
                 </tbody>
               </table>
@@ -131,10 +135,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* <!-- Copyright --> */}
-        <div className="text-center p-3 bg-dark">
-          © 2022 Copyright Vita Amet
-        </div>
+       
       </footer>
     </>
   );
