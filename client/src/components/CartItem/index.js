@@ -39,7 +39,7 @@ const CartItem = ({ item }) => {
           <div className="col-lg-12 card mb-5 pt-5 mx-3 px-2">
             <div className="row">
               <div className="col-lg-3">
-                <img alt={item.name} src="http://via.placeholder.com/200" />
+                <img className="img-fluid" alt={item.name} src={`https://drive.google.com/uc?export=view&id=${item.image}`} />
                 <div className="row">
                   <div className="col-lg-12">
                     <p>{item.name}</p>

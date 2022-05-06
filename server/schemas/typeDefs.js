@@ -44,6 +44,11 @@ const typeDefs = gql`
     user: User
   }
 
+  type Cart {
+    _id: ID
+    items: [Item]!
+  }
+
   type Query {
     locations: [Location]
     items: [Item]
@@ -59,6 +64,7 @@ const typeDefs = gql`
     addUser(email: String!, username: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addOrder(items: [ID]!): Order
+    clearCart: String!
   }
 `;
 
