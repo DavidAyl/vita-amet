@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaBars, FaShoppingCart, FaUserCircle } from "react-icons/fa";
 // import { FaShoppingCart } from 'react-icons/fa';
 import { Link } from "react-router-dom";
@@ -6,11 +6,18 @@ import Logo from "../../assets/logo192.png";
 import Auth from "../../utils/auth";
 // import Alert from 'react-bootstrap/Alert'
 
+
 function Navbar() {
   const logout = (event) => {
     event.preventDefault();
     Auth.logout();
   };
+
+  const [navbarOpen, setNavbarOpen] = useState(false);
+  
+  const handleToggle = () => {
+    setNavbarOpen(!navbarOpen)
+  }
 
   if (Auth.loggedIn()) {
     return (
@@ -32,20 +39,20 @@ function Navbar() {
 
             {/* <!-- Toggle button --> */}
             <button
-              className="navbar-toggler border-0"
+              className={`navbar-toggler border-0 ${!navbarOpen && "collapsed"}`}
               type="button"
               data-mdb-toggle="collapse"
               data-mdb-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent"
               aria-expanded="false"
-              aria-label="Toggle navigation"
+              aria-label="Toggle navigation" onClick={handleToggle}
             >
               <FaBars />
             </button>
 
             {/* <!-- Collapsible wrapper --> */}
             <div
-              className="collapse navbar-collapse"
+              className={`collapse navbar-collapse ${navbarOpen && "show"}`}
               id="navbarSupportedContent"
             >
 

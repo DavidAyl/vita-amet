@@ -57,7 +57,7 @@ const ItemCard = ({ item }) => {
         <div className="" style={styles.desc}>
           <p>{item.description}</p>
         </div>
-        <button className="btn btn-success mb-5" onClick={addToCart}>
+        <button className="btn btn-success mt-3 mb-5" onClick={addToCart}>
           Add to cart
         </button>
 
