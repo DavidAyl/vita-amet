@@ -1,7 +1,6 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { User, Item, Location, Order, Cart } = require("../models");
+const { User, Item, Location, Order } = require("../models");
 const { signToken } = require("../utils/auth");
-const { Types } = require("mongoose");
 const stripe = require("stripe")("sk_test_4eC39HqLyjWDarjtT1zdp7dc");
 
 const resolvers = {
@@ -27,21 +26,6 @@ const resolvers = {
       }
       throw new AuthenticationError("You need to be logged in!");
     },
-    cart: async (parent, _id, context) => {
-      if (context.user) {
-        //console.log(context.user._id);
-        let carts = await Cart.find();
-        //carts.forEach((cart) => console.log(cart));
-        let cart = carts.find((cart) => cart.userId == context.user._id);
-        return cart;
-        //return await Cart.find({ userId: context.user._id });
-      }
-
-      throw new AuthenticationError("Not logged in");
-    },
-    carts: async () => {
-      return Cart.find();
-    },
     order: async (parent, { _id }, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
@@ -60,14 +44,14 @@ const resolvers = {
       const { items } = await order.populate("items");
 
       for (let i = 0; i < items.length; i++) {
-        const item = await stripe.items.create({
+        const product = await stripe.products.create({
           name: items[i].name,
           description: items[i].description,
           images: [`${url}/images/${items[i].image}`],
         });
 
         const price = await stripe.prices.create({
-          item: item.id,
+          product: product.id,
           unit_amount: items[i].price * 100,
           currency: "usd",
         });
@@ -131,36 +115,6 @@ const resolvers = {
       const token = signToken(user);
 
       return { token, user };
-    },
-    addCartItem: async (parent, { itemId }, context) => {
-      console.log("add item with id:", itemId);
-      if (context.user) {
-        let carts = await Cart.find();
-        //carts.forEach((cart) => console.log(cart));
-        let cart = carts.find((cart) => cart.userId == context.user._id);
-
-        if (cart) {
-          const item = await Item.findById(itemId);
-          console.log("item", item._id);
-          cart = await Cart.findByIdAndUpdate(cart._id, {
-            $push: { items: item },
-          }).populate("items");
-          console.log("cart.items", cart.items);
-        }
-
-        return cart;
-        /*const user = await User.findByIdAndUpdate(
-          context.user._id,
-          { $push: { orders: order } },
-          { new: true }
-        )
-          .populate("orders")
-          .populate({ path: "orders", populate: "items" });
-
-        return user.orders.id(order._id);*/
-      }
-
-      throw new AuthenticationError("Not logged in");
     },
   },
 };

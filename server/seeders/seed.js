@@ -11,14 +11,6 @@ db.once("open", async () => {
   try {
     await User.deleteMany({});
     await User.create(userSeeds);
-    // get the test user that we just inserted because now it has an id
-    let testUserId = (await User.find({ username: "testuser" })).map(
-      (user) => user._id
-    );
-    // use the user id to link the cart with the user
-    let testUserCart = { userId: testUserId, items: [] };
-    await Cart.deleteMany({});
-    await Cart.create(testUserCart);
     // await Location.create(locationSeed)
     await Item.deleteMany({});
     await Item.create(beachSeed);

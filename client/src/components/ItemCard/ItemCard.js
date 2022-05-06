@@ -1,6 +1,8 @@
-import { useMutation } from "@apollo/client";
 import React, { useEffect, useState } from "react";
-import { ADD_CART_ITEM } from "../../utils/mutations";
+import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
+import { useStoreContext } from "../../utils/GlobalState";
+import { idbPromise } from "../../utils/helpers";
+
 // Import Link component for all internal application hyperlinks
 // import { Link } from 'react-router-dom';
 const styles = {
@@ -10,24 +12,33 @@ const styles = {
   },
 };
 
-const ItemCard = (item) => {
-  const id = item._id;
+const ItemCard = ({ item }) => {
+  const [state, dispatch] = useStoreContext();
+  const { _id } = item;
+  const { cart } = state;
+
   const [hasBeenAdded, setHasBeenAdded] = useState(false);
-  const [addItemToCart, { error }] = useMutation(ADD_CART_ITEM);
-  useEffect(() => {
-
-  })
+  useEffect(() => {});
   const itemAdded = () => ({ display: hasBeenAdded ? "block" : "none" });
-  const addToCart = async (event) => {
 
-    console.log("addtocart");
-    event.preventDefault();
-    try {
-      const { data } = await addItemToCart({ variables: { itemId: id } });
-      setHasBeenAdded(true);
-      console.log(data);
-    } catch (err) {
-      console.error(error);
+  const addToCart = () => {
+    const itemInCart = cart.find((cartItem) => cartItem._id === _id);
+    if (itemInCart) {
+      dispatch({
+        type: UPDATE_CART_QUANTITY,
+        _id: _id,
+        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
+      });
+      idbPromise("cart", "put", {
+        ...itemInCart,
+        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
+      });
+    } else {
+      dispatch({
+        type: ADD_TO_CART,
+        product: { ...item, purchaseQuantity: 1 },
+      });
+      idbPromise("cart", "put", { ...item, purchaseQuantity: 1 });
     }
   };
 
@@ -48,10 +59,12 @@ const ItemCard = (item) => {
         <button className="btn btn-success mb-5" onClick={addToCart}>
           Add to cart
         </button>
+
         <div className="alert alert-success alert-dismissible fade show" role="alert" style={itemAdded()} onClick={() => setHasBeenAdded(false)}>
-          <strong>Yay!</strong> Your object was added to cart!
-          <button type="button" className="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <strong>Yay! {item.name}</strong> added to cart!
+          <button type="button" className="btn-close" data-dismiss="alert" aria-label="Close">
+            {/* <span aria-hidden="true">&times;</span> */}
+
           </button>
         </div>
       </div>
