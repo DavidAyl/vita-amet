@@ -2,16 +2,17 @@
 import React from "react";
 import { Navigate, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
+import { Link } from "react-router-dom";
 // Utilities
 import Auth from "../utils/auth";
 import {
-  QUERY_USERS,
+  // QUERY_USERS,
   QUERY_USER,
   QUERY_ME,
   QUERY_ORDER,
 } from "../utils/queries";
 // Components
-import UserList from "../components/UserList";
+// import UserList from "../components/UserList";
 import Avatar from "../assets/avatar.png";
 
 const styles = {
@@ -31,18 +32,16 @@ const Profile = () => {
   });
 
   const {
-    loading: orderLoading,
     data: orderData,
-    error: orderError,
   } = useQuery(QUERY_ORDER);
 
   const orders = orderData?.order || [];
 
   // Get a list of all users
-  const { loading: usersLoading, data: usersData } = useQuery(QUERY_USERS);
+  // const { data: usersData } = useQuery(QUERY_USERS);
 
   const user = data?.me || data?.user || {};
-  const users = usersData?.users || [];
+  // const users = usersData?.users || [];
 
   if (error) console.log(error);
 
@@ -61,21 +60,18 @@ const Profile = () => {
 
   if (!user?.username) {
     return (
-      <main>
-        <h4>
-          You need to be logged in to see this. Use the navigation links above
-          to sign up or log in!
-        </h4>
-      </main>
+      <>
+        <main>
+          <Link
+            className="btn btn-success"
+            to="/Login">
+            Login
+          </Link>
+        </main>
+      </>
     );
   }
 
-  const renderUserList = () => {
-    if (usersLoading) return null;
-    // Only renders users who's profile we're not currently viewing
-    const notMeUsers = users.filter((o) => o._id !== user._id);
-    return <UserList users={notMeUsers} title="User List" />;
-  };
 
   const renderCurrentUserInfo = () => {
     if (id) return null;
@@ -87,7 +83,7 @@ const Profile = () => {
             <img
               className="rounded-circle img-fluid"
               src={Avatar}
-              alt=""
+              alt="avatar"
               style={styles.profile}
             />
           </div>
@@ -118,7 +114,6 @@ const Profile = () => {
       <main>
         <div>
           {renderCurrentUserInfo()}
-          {renderUserList()}
         </div>
         <div>
           <h2>Previous Orders</h2>
