@@ -4,7 +4,10 @@ import ContactComponent from '../components/Contact';
 const Contact = () => {
 
 	return (
-		<ContactComponent />
+		<main>
+			<ContactComponent />
+
+		</main>
 	);
 };
 

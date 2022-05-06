@@ -59,20 +59,12 @@ const ItemCard = ({ item }) => {
         <button className="btn btn-success mb-5" onClick={addToCart}>
           Add to cart
         </button>
-        <div
-          className="alert alert-success alert-dismissible fade show"
-          role="alert"
-          style={itemAdded()}
-          onClick={() => setHasBeenAdded(false)}
-        >
-          <strong>Yay!</strong> Your object was added to cart!
-          <button
-            type="button"
-            className="close"
-            data-dismiss="alert"
-            aria-label="Close"
-          >
-            <span aria-hidden="true">&times;</span>
+
+        <div className="alert alert-success alert-dismissible fade show" role="alert" style={itemAdded()} onClick={() => setHasBeenAdded(false)}>
+          <strong>Yay! {item.name}</strong> added to cart!
+          <button type="button" className="btn-close" data-dismiss="alert" aria-label="Close">
+            {/* <span aria-hidden="true">&times;</span> */}
+
           </button>
         </div>
       </div>

@@ -13,11 +13,14 @@ html, * {
 
 h5{
   letter-spacing: 10px;
-  
+}
+
+header {
+  margin-top: 150px;
 }
 
 main {
-  margin-top: 100px;
+  margin-top: 250px;
 }
 .navBrand {
   letter-spacing: 10px;
