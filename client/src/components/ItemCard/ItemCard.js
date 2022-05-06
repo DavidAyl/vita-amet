@@ -49,7 +49,7 @@ const ItemCard = ({ item }) => {
       <img
         className="img-fluid mt-3 rounded mx-3"
         src="http://via.placeholder.com/200"
-        alt=""
+        alt="item"
       ></img>
       <h4 className="text-uppercase fs-5 mt-4">{item.name}</h4>
       <div className=" my-2 px-2">

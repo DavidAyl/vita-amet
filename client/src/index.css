@@ -21,6 +21,9 @@ header {
 
 main {
   margin-top: 250px;
+  /* margin-bottom: 350px; */
+  position: relative;
+  min-height: 60vh;
 }
 .navBrand {
   letter-spacing: 10px;
