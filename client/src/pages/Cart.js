@@ -73,17 +73,23 @@ const Cart = () => {
                 {state.cart.map((item) => (
                   <CartItem key={item._id} item={item} />
                 ))}
+                
                 <div className="flex-row space-between text-end">
                   <strong>Total: ${calculateTotal()}</strong>
 
+
                   {Auth.loggedIn() ? (
-                    <button onClick={submitCheckout}>Checkout</button>
+                    <div>
+                    <button 
+                    className="text-end btn btn-success text-white mb-5 px-4 my-3"
+                    onClick={submitCheckout}>Checkout</button>
+                    </div>
                   ) : (
-                      <div className="text-end">
+                      <div className="flex-row space-between text-end">
                       <Link to="/Login">
                         <button 
                         type="click" 
-                        className="text-end btn btn-warning text-dark mb-5 px-2">
+                        className="text-end btn btn-success text-white mb-5  my-3 px-2">
                           Login to checkout
                         </button>
                       </Link>
