@@ -11,7 +11,7 @@ import {
   FaRegCheckCircle,
   FaShoppingCart,
 } from "react-icons/fa";
-import LocationCards from "../components/LocationCards";
+
 
 import { Link } from "react-router-dom";
 
