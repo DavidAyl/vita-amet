@@ -58,7 +58,6 @@ So THAT I am able to checkout and put in my card payment for my items that I am 
 - graphQl
 - bcrypt
 - jquery
-- dotenv
 - mongoose 
 - bootstrap
 - react-bootstap
