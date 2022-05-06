@@ -14,7 +14,7 @@
 
 ---
 ## Description
-Chiron is an application created with patient and physician interaction in mind. The application has a user authentication system that allows patients to sign up or login and view their patient portal. Upon signup, the patient will create their login credentials, input contact information, patient history, and give information on lifestyle choices regarding drugs/alcohol. This information is then populated into the patient portal, Chiron Portal. Within the portal, the patient has the ability to schedule an appointment and is taken to a list of doctors to select the doctor they would like to see. 
+ Here at Vita Amet we are a company that values the excitement and adventure of any activity you may be partaking in. Our goal is to provide a painless, smooth, renting service to meet any of your activity needs. Our renting service includes a wide variety of activewear, safety equipment, outdoor activity gear, and other useful and tools that fit your activity needs. As a company we value all our customers and do our best to put the customer's needs first. 
 
 
 ---
@@ -31,18 +31,25 @@ Chiron is an application created with patient and physician interaction in mind.
 
   npm run seed
 
+  npm run build
+
   npm run develop
+  
 
 ````
 
 ---
 ## User Story
 ````
-AS a patient who wants to make an appointment with my physician of choosing
+AS a user I want to be able to have an application where I can rent beach, hiking, and snow equiptment for whatever kind of activity I am planning to partake in.
 
-I WANT to able to signup and login onto the Chiron site
+I WANT to able to signup and login onto the website and see all the rental gear and equiptment that I need for my activity.
 
-SO THAT I can view all physicians and view my information and make an appointment that is best for me.
+I WANT to be able to choose a location and see the rental equiptment for that specific location instead of all rentals.
+
+I WANT to be able to add items to my cart, view my cart, and view previous orders as well.
+
+So THAT I am able to checkout and put in my card payment for my items that I am renting.
 ````
 
 
