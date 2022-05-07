@@ -27,7 +27,7 @@ function ContactComponent(props) {
     <div className="container mb-5">
       <div className=" text-center mt-5 ">
 
-        <h1 className='mb-3' >Contact Us</h1>
+        <h1 className='mb-3 titles' >contact us</h1>
 
 
       </div>

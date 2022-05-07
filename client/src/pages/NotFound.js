@@ -16,13 +16,6 @@ const NotFound = () => {
               <div class="col-12 text-center">
                 <div class="four_zero_four_bg">
                 </div>
-
-                <div class="contant_box_404">
-                  <Link className="btn btn-success my-5"
-                    to="/"> Return Home</Link>
-
-
-                </div>
               </div>
             </div>
           </div>

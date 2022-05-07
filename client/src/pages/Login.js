@@ -3,9 +3,17 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 import { SpinnerDotted } from 'spinners-react'
+import Logo from "../assets/logo192.png";
 
 import Auth from '../utils/auth';
 
+
+const styles = {
+  logo: {
+    height: "100px",
+    width: "100px"
+  }
+}
 
 const Login = () => {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -45,6 +53,7 @@ const Login = () => {
     if (error) {
       return (
         <>
+         
           <div className="alert alert-warning alert-dismissible fade show" role="alert">
             <strong>Uh Oh!</strong> Please check your credentials and try again.
             <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close">
@@ -113,14 +122,16 @@ const Login = () => {
   return (
     <>
       <main>
-        <div>
-          <h5 className='text-center text-uppercase'>Login</h5>
+        <div className='text-center'>
+          <img src={Logo} alt="Vita Amet" style={styles.logo} className="mb-5" />
+          <h1 className='text-center text-uppercase titles'>login</h1>
 
           <div className='container'>
             <div className='row justify-content-center'>
               <div className='col-6'>
-                <div className="tab-content">
+                <div className="tab-content text-center">
                   {errorAlert()}
+
 
                   {renderForm()}
                 </div>

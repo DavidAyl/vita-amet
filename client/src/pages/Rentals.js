@@ -21,6 +21,7 @@ const Rentals = () => {
     <>
       <main>
         <div className="container">
+          <h1 className="card-text mx-3 mb-5 titles text-center">rentals</h1>
           <div className="row">
             {items.map((item) => (
               <ItemCard key={item._id} item={item} />

@@ -84,7 +84,7 @@ const Profile = () => {
             </div>
             <div className="col-md-4">
               <div className="card">
-                <h3 className="card-header">Hi, {user.username}!</h3>
+                <h2 className="card-header">Hi, {user.username}!</h2>
                 <div className="card-body">
                   <img
                     className="rounded-circle img-fluid"

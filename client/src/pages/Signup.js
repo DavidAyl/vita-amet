@@ -5,12 +5,17 @@ import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
+import Logo from "../assets/logo192.png";
 
 
 const styles = {
   container: {
     marginTop: "100px",
   },
+  logo: {
+    height: "100px",
+    width: "100px"
+  }
 }
 
 
@@ -121,8 +126,9 @@ const Signup = () => {
   return (
     <>
       <main style={styles.main}>
-        <div style={styles.container}>
-          <h5 className='text-center text-uppercase'>Sign Up</h5>
+        <div className="text-center"style={styles.container}>
+          <img src={Logo} alt="Vita Amet" style={styles.logo} className="mb-5" />
+          <h1 className='text-center text-uppercase titles'>sign up</h1>
 
           <div className='container'>
             <div className='row justify-content-center'>

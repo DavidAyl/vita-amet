@@ -26,7 +26,7 @@ function Success() {
 
       setTimeout(() => {
         window.location.assign('/');
-      }, 1939890000);
+      }, 6000);
     }
 
     saveOrder();
@@ -35,7 +35,7 @@ function Success() {
   return (
     <main>
       <div className='container text-center mt-5'>
-        <h1 className='text-success mb-5 text-lowercase'>... Your order was placed.</h1>
+        <h1 className='text-success mb-5 text-lowercase titles'>... Your order was placed</h1>
         <h2 className='mb-5 text-success fw-light'>Now pack your bags and get ready for an <strong> adventure</strong>.</h2> 
         <p className='mb-5'>You will now be redirected back to our homepage. Thank you!</p>
         
