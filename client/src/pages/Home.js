@@ -43,10 +43,10 @@ const Home = () => {
             <div className="col-md-12 bg-light">
               <div className="row">
                 <Link
-                  className="nav-link col-md-4 text-center text-secondary "
+                  className="nav-link col-md-4 text-center text-dark "
                   to="/Location">
                   <div className="card border-0 bg-light">
-                    <p className='text-center fs-1 text-secondary'>
+                    <p className='text-center fs-1 text-dark'>
                       <FaLocationArrow /></p>
 
                     <div className="card-block">
@@ -61,12 +61,12 @@ const Home = () => {
                 </Link>
 
                 <Link
-                  className="nav-link col-md-4 text-center text-secondary"
+                  className="nav-link col-md-4 text-center text-dark"
                   to="/Rentals"
                 >
 
                   <div className="card border-0 bg-light">
-                    <p className='text-center fs-1 text-secondary'>
+                    <p className='text-center fs-1 text-dark'>
                       <FaRegCheckCircle /></p>
 
                     <div className="card-block">
@@ -82,12 +82,12 @@ const Home = () => {
                 </Link>
 
                 <Link
-                  className="nav-link col-md-4 text-center text-secondary"
+                  className="nav-link col-md-4 text-center text-dark"
                   to="/Cart"
                 >
 
                   <div className="card border-0 bg-light">
-                    <p className='text-center fs-1 text-secondary'>
+                    <p className='text-center fs-1 text-dark'>
                       < FaShoppingCart /></p>
 
 

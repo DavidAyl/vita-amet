@@ -4,13 +4,30 @@ import { Link } from "react-router-dom";
 
 const NotFound = () => {
   return (
-    <main>
-      <div className="d-flex justify-content-center flex-column align-items-center">
-        <h1 className="my-5 text-success display-3">
-          Uh oh, this page is unavailable!
-        </h1>
-        <Link className="btn btn-success my-5"
-          to="/"> Return Home?</Link>
+    <main className="text-center">
+      <div >
+        <h1 class="text-center display-2">404</h1>
+        <h2 className="my-5 text-success display-3">Uh oh, looks like you're lost!</h2>
+        {/* <h2 class="h2">...this page is unavailable</h2> */}
+
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="col-12 text-center">
+                <div class="four_zero_four_bg">
+                </div>
+
+                <div class="contant_box_404">
+                  <Link className="btn btn-success my-5"
+                    to="/"> Return Home</Link>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
 
       </div>
     </main>
@@ -18,3 +35,4 @@ const NotFound = () => {
 };
 
 export default NotFound;
+

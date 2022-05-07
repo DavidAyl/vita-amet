@@ -2,7 +2,6 @@
 import React from "react";
 import { Navigate, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
-import { Link } from "react-router-dom";
 // Utilities
 import Auth from "../utils/auth";
 import {
@@ -59,15 +58,14 @@ const Profile = () => {
     );
   }
 
-  if (!user?.username) {
+  if (!user?.username && Auth.loggedIn) {
     return (
       <>
         <main>
-          <Link
-            className="btn btn-success"
-            to="/Login">
-            Login
-          </Link>
+          <div className="container text-center text-success">
+            <h1>Uh oh! Please login to view your profile.</h1>
+        
+          </div>
         </main>
       </>
     );

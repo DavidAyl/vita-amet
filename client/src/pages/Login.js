@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
+import { SpinnerDotted } from 'spinners-react'
 
 import Auth from '../utils/auth';
 
@@ -57,15 +58,17 @@ const Login = () => {
   const renderForm = () => {
     if (data) {
       return (
-          <Link to="/">back to the homepage.</Link>
+        <main>
+          <div className='container text-center'>
+          <SpinnerDotted/>
+          </div>
+
+        </main>
       )
     }
     return (
 
       <>
-
-
-
         <form onSubmit={handleFormSubmit}>
 
           {/* <!-- Email input --> */}

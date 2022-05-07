@@ -58,7 +58,6 @@ function Navbar() {
               id="navbarSupportedContent"
             >
 
-              {/* <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul> */}
 
               {/* <!-- Icons --> */}
               <div className="navbar-nav justify-content-end me-1">
@@ -67,7 +66,6 @@ function Navbar() {
                   <Link to="/about" className="nav-link ">
                     About
                   </Link>
-                  {/* <a className="nav-link" href="#">About</a> */}
                 </div>
 
                 <div className="nav-item me-4 inline-block text-center">

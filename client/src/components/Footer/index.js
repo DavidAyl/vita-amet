@@ -37,7 +37,7 @@ const Footer = () => {
             <div className="col-lg-4 col-md-12 mb-4 mb-md-0">
               <p className="text-uppercase mb-4 text-center h5" style={styles.h5}>Vita Amet</p>
 
-              <p className='text-center'>
+              <p className='text-center pt-3'>
                 Vita Amet is focused on those who love adventure. We have been making adventures more enjoyable since 2022.
               </p>
 
@@ -81,7 +81,7 @@ const Footer = () => {
                   </li>
                   <li className="list-group-item bg-transparent text-white border-0 col" style={styles.textLeft}>
                     <span className="fa-li me-2 bg-transparent ">
-                      <strong>Vita Amet</strong> Headquarters<br></br>
+                      {/* <strong>Vita Amet</strong> HQ<br></br> */}
                       123 Vita Amet Blvd<br></br>
                       Charlotte, NC, 28227<br></br>
                     </span>
@@ -95,7 +95,9 @@ const Footer = () => {
                   </li>
                   <li className="list-group-item bg-transparent text-white border-0 col" style={styles.textLeft}>
                     <span className="bg-transparent">
-                      <a className="text-decoration-none text-white" href="mailto:customer@vita-amet.com">customer@vita-amet.com</a>
+                      <a
+                        className="text-decoration-none text-white" href="mailto:customer@vita-amet.com"
+                        rel="noreferrer">customer@vita.com</a>
                     </span>
                   </li>
                 </ul>
@@ -105,7 +107,10 @@ const Footer = () => {
                   </li>
                   <li className="list-group-item bg-transparent text-white border-0 col" style={styles.textLeft}>
                     <span className="bg-transparent">
-                      <a className="text-decoration-none text-white" href="tel:+1800-848-2268">1-800-VITA-AMT</a>
+                      <a
+                        className="text-decoration-none text-white"
+                        href="tel:+1800-848-2268"
+                        rel="noreferrer">1-800-VITA-AMT</a>
                     </span>
                   </li>
                 </ul>
