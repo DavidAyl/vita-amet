@@ -4,6 +4,7 @@
   --cream: #fefae0;
   --lightorange: #dda15e;
   --darkorange: #bc6c25;
+  --green:#0b3008;
 }
 html, * {
   margin: 0;
@@ -28,4 +29,8 @@ main {
 .navBrand {
   letter-spacing: 10px;
   text-transform:uppercase;
+}
+
+.btn-green {
+  background-color: var(--green);
 }

@@ -11,7 +11,7 @@ const styles = {
     // position: "absolute",
     bottom: 0,
     width: "100%",
-    opacity: "0.9", 
+    backgroundColor: "#0b3008"
     
   },
   rightBtn: {
@@ -20,20 +20,23 @@ const styles = {
   textLeft: {
     textAlign: "left",
   },
+  h5: {
+    letterSpacing: "10px"
+}
 
 }
 
 const Footer = () => {
   return (
     <>
-      <footer className="text-white text-center text-lg-start bg-success" style={styles.footer}>
+      <footer className="text-white text-center text-lg-start" style={styles.footer}>
 
 
 
         <div className="container p-4">
           <div className="row mt-4">
             <div className="col-lg-4 col-md-12 mb-4 mb-md-0">
-              <h5 className="text-uppercase mb-4 text-center " style={styles.h5}>Vita Amet</h5>
+              <p className="text-uppercase mb-4 text-center h5" style={styles.h5}>Vita Amet</p>
 
               <p className='text-center'>
                 Vita Amet is focused on those who love adventure. We have been making adventures more enjoyable since 2022.
@@ -75,7 +78,7 @@ const Footer = () => {
             </div>
 
             <div className="col-lg-4 col-md-6 mb-4 mb-md-0">
-              <h5 className="text-uppercase mb-4 pb-1 text-center fs-5" style={styles.h5}>Contact</h5>
+              <p className="text-uppercase mb-4 pb-1 text-center fs-5" style={styles.h5}>Contact</p>
               <div className=''>
 
                 <ul className="list-group list-group-horizontal bg-transparent">
@@ -97,7 +100,9 @@ const Footer = () => {
                     <span className="fa-li me-2 bg-transparent border-0"><FaEnvelope /></span>
                   </li>
                   <li className="list-group-item bg-transparent text-white border-0 col" style={styles.textLeft}>
-                    <span className="bg-transparent">customer@vita-amet.com</span>
+                    <span className="bg-transparent">
+                      <a  className="text-decoration-none text-white"href="mailto:customer@vita-amet.com">customer@vita-amet.com</a>
+                      </span>
                   </li>
                 </ul>
                 <ul className="list-group list-group-horizontal bg-transparent">
@@ -105,7 +110,9 @@ const Footer = () => {
                     <span className="fa-li me-2 bg-transparent"><FaPhone /></span>
                   </li>
                   <li className="list-group-item bg-transparent text-white border-0 col" style={styles.textLeft}>
-                    <span className="bg-transparent">1-800-VITA-AMET</span>
+                    <span className="bg-transparent">
+                      <a className="text-decoration-none text-white"href="tel:+1800-848-2268">1-800-VITA-AMT</a>
+                      </span>
                   </li>
                 </ul>
               </div>
@@ -113,7 +120,7 @@ const Footer = () => {
             </div>
 
             <div className="col-lg-4 col-md-6 mb-4 mb-md-0">
-              <h5 className="text-uppercase mb-4 text-center" style={styles.h5}>Hours</h5>
+              <p className="text-uppercase mb-4 text-center h5" style={styles.h5}>Hours</p>
 
               <table className="table text-center text-white">
                 <tbody className="fw-normal">

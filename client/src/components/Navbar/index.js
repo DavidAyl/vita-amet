@@ -19,17 +19,21 @@ function Navbar() {
     setNavbarOpen(!navbarOpen)
   }
 
+  if(navbarOpen) {
+    
+    
+  }
+
+
   if (Auth.loggedIn()) {
     return (
       <>
-        {/* <Link to="/me">{Auth.getProfile().data.username}'s profile</Link>
-        <button onClick={logout}>Logout</button> */}
+
         {/* <!-- Navbar --> */}
         <nav className="navbar navbar-expand-lg bg-light navbar-light fixed-top py-5">
           {/* <!-- Container wrapper --> */}
           <div className="container-fluid">
             {/* <!-- Navbar brand --> */}
-
 
             <Link className="navbar-brand logo" to="/">
               <img src={Logo} alt="logo" height="50px" />
@@ -39,7 +43,7 @@ function Navbar() {
 
             {/* <!-- Toggle button --> */}
             <button
-              className={`navbar-toggler border-0 ${!navbarOpen && "collapsed"}`}
+              className={`navbar-toggler border-0${!navbarOpen && "collapsed"}`}
               type="button"
               data-mdb-toggle="collapse"
               data-mdb-target="#navbarSupportedContent"
@@ -52,58 +56,59 @@ function Navbar() {
 
             {/* <!-- Collapsible wrapper --> */}
             <div
-              className={`collapse navbar-collapse ${navbarOpen && "show"}`}
+              className={`collapse navbar-collapse justify-content-end ${navbarOpen && "show"}`}
               id="navbarSupportedContent"
             >
 
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+              {/* <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul> */}
 
               {/* <!-- Icons --> */}
-              <ul className="navbar-nav d-flex flex-row me-1">
+              <div className="navbar-nav justify-content-end me-1">
                 {/* <!-- Link --> */}
-                <li className="nav-item me-4">
-                  <Link to="/about" className="nav-link">
+                <div className="nav-item me-4 block text-center">
+                  <Link to="/about" className="nav-link ">
                     About
                   </Link>
                   {/* <a className="nav-link" href="#">About</a> */}
-                </li>
+                </div>
 
-                <li className="nav-item me-4">
+                <div className="nav-item me-4 inline-block text-center">
                   <Link to="/location" className="nav-link">
                     Location
                   </Link>
-                </li>
+                </div>
 
-                <li className="nav-item me-4">
+                <div className="nav-item me-4 inline-block text-center">
                   <Link to="/rentals" className="nav-link">
                     Rentals
                   </Link>
-                </li>
+                </div>
 
-                <li className="nav-item me-4">
+                <div className="nav-item me-4 inline-block text-center">
                   <Link to="/contact" className="nav-link">
                     Contact
                   </Link>
-                </li>
+                </div>
 
-                <li className="nav-item me-4">
-                  <button className="nav-link btn" onClick={logout}>
+                <div className="nav-item me-4 inline-block text-center">
+                  <p className="nav-link" onClick={logout}>
                     Logout
-                  </button>
-                </li>
+                  </p>
+                </div>
+              
 
-                <li className="nav-item me-4 fs-5">
-                  <Link to="/me" className="nav-link">
+                <div className="nav-item me-4 fs-5 text-center inline-block">
+                  <Link to="/me" className="nav-link text-secondary">
                     <FaUserCircle />
                   </Link>
-                </li>
+                </div>
 
-                <li className="nav-item me-4 me-lg-0 fs-5">
-                  <Link to="/cart" className="nav-link">
+              <div className="nav-item me-4 fs-5 text-center inline-block">
+                <Link to="/cart" className="nav-link text-secondary">
                     <FaShoppingCart />
                   </Link>
-                </li>
-              </ul>
+                </div>
+            </div>
             </div>
           </div>
           {/* <!-- Container wrapper --> */}
@@ -131,13 +136,13 @@ function Navbar() {
           </Link>
           {/* <!-- Hamburger button --> */}
           <button
-            className="navbar-toggler border-0"
+            className={`navbar-toggler border-0 ${!navbarOpen && "collapsed"}`}
             type="button"
             data-mdb-toggle="collapse"
             data-mdb-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
-            aria-label="Toggle navigation"
+            aria-label="Toggle navigation" onClick={handleToggle}
           >
 
 
@@ -146,52 +151,55 @@ function Navbar() {
 
 
           {/* <!-- Collapsible wrapper --> */}
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+          <div className={`collapse navbar-collapse justify-content-end ${navbarOpen && "show"}`}
+          
+          id="navbarSupportedContent">
 
             {/* <!-- Icons --> */}
-            <ul className="navbar-nav d-flex flex-row me-1">
+            <div className="navbar-nav justify-content-end me-1">
               {/* <!-- Link --> */}
-              <li className="nav-item me-4">
+              <div className="nav-item me-4 inline-block text-center">
                 <Link to="/about" className="nav-link">
                   About
                 </Link>
                 {/* <a className="nav-link" href="#">About</a> */}
-              </li>
+              </div>
 
-              <li className="nav-item me-4">
+              <div className="nav-item me-4 inline-block text-center">
                 <Link to="/location" className="nav-link">
                   Location
                 </Link>
-              </li>
+              </div>
 
-              <li className="nav-item me-4">
+              <div className="nav-item me-4 inline-block text-center">
                 <Link to="/rentals" className="nav-link">
                   Rentals
                 </Link>
-              </li>
+              </div>
 
-              <li className="nav-item me-4">
+
+              <div className="nav-item me-4 inline-block text-center">
                 <Link to="/contact" className="nav-link">
                   Contact
                 </Link>
-              </li>
+              </div>
 
-              <li className="nav-item me-4">
+
+              <div className="nav-item me-4 inline-block text-center">
                 <Link
                   className="nav-link btn btn-success text-white px-4"
                   to="/login"
                 >
                   Login
                 </Link>
-              </li>
+              </div>
 
-              <li className="nav-item me-5 me-lg-0">
+              <div className="nav-item me-4 fs-5 text-center inline-block">
                 <Link to="/cart" className="nav-link">
                   <FaShoppingCart />
                 </Link>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
         {/* <!-- Container wrapper --> */}

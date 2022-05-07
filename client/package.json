@@ -5,8 +5,8 @@
   "proxy": "http://localhost:3001",
   "dependencies": {
     "@apollo/client": "^3.5.8",
-    "@stripe/stripe-js": "^1.3.1",
     "@emailjs/browser": "^3.6.2",
+    "@stripe/stripe-js": "^1.3.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -16,6 +16,7 @@
     "react-dom": "^17.0.1",
     "react-router-dom": "^6.2.1",
     "react-scripts": "4.0.1",
+    "spinners-react": "^1.0.7",
     "web-vitals": "^0.2.4",
     "workbox-background-sync": "^5.1.4",
     "workbox-broadcast-update": "^5.1.4",

@@ -51,7 +51,7 @@ const Home = () => {
                       <FaLocationArrow /></p>
 
                     <div className="card-block">
-                      <h4 className="card-title">Pick a Location</h4>
+                      <h3 className="card-title fs-4">Pick a Location</h3>
                       <p className="card-text mx-3">
                         With our percisely placed rental locations, seamlessly
                         rent equipment near you. Just select a location to get
@@ -71,9 +71,9 @@ const Home = () => {
                       <FaRegCheckCircle /></p>
 
                     <div className="card-block">
-                      <h4 className="card-title">
+                      <h3 className="card-title fs-4">
                         Select your Rentals
-                      </h4>
+                      </h3>
                       <p className="card-text mx-3 ">
                         With our large selection of equipment, you can find anything you'll need on your adventure.
 
@@ -94,7 +94,7 @@ const Home = () => {
 
 
                     <div className="card-block">
-                      <h4 className="card-title">Checkout</h4>
+                      <h3 className="card-title fs-4">Checkout</h3>
                       <p className="card-text mx-3">
                         Select a payment method that fits you best, we offer a
                         100% satisfaction guarantee. After payment, you can
