@@ -103,6 +103,20 @@ const Signup = () => {
 
     );
   };
+  
+  const errorAlert = () => {
+    if (error) {
+      return (
+        <>
+        <div className="alert alert-warning alert-dismissible fade show" role="alert">
+          <strong>Uh Oh!</strong> Please make your password longer than 5 characters.
+          <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close">
+          </button>
+        </div>
+        </>
+      )
+    }
+  }
 
   return (
     <>
@@ -114,9 +128,11 @@ const Signup = () => {
             <div className='row justify-content-center'>
               <div className='col-6'>
                 <div className="tab-content">
+                  {errorAlert()}
 
                   {renderForm()}
-                  {error && <div>{error.message}</div>}
+                  
+                  
                 </div>
               </div>
             </div>

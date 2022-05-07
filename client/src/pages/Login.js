@@ -40,6 +40,20 @@ const Login = () => {
     });
   };
 
+  const errorAlert = () => {
+    if (error) {
+      return (
+        <>
+          <div className="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Uh Oh!</strong> Please check your credentials and try again.
+            <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close">
+            </button>
+          </div>
+        </>
+      )
+    }
+  }
+
   const renderForm = () => {
     if (data) {
       return (
@@ -103,9 +117,9 @@ const Login = () => {
             <div className='row justify-content-center'>
               <div className='col-6'>
                 <div className="tab-content">
+                  {errorAlert()}
 
                   {renderForm()}
-                  {error && <div>{error.message}</div>}
                 </div>
               </div>
             </div>
