@@ -47,7 +47,7 @@ const CartItem = ({ item }) => {
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div className="col-md-6">
                     <div className="flex-row space-between">
                   <p><strong className="text-success">{item.name}</strong></p>
                   <p>{item.description}</p>

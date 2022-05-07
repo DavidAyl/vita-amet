@@ -2,18 +2,18 @@
 import React from "react";
 import { Navigate, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
-import { Link } from "react-router-dom";
 // Utilities
 import Auth from "../utils/auth";
 import {
   // QUERY_USERS,
   QUERY_USER,
   QUERY_ME,
-  QUERY_ORDER,
+  // QUERY_ORDER,
 } from "../utils/queries";
 // Components
 // import UserList from "../components/UserList";
 import Avatar from "../assets/avatar.png";
+import { SpinnerDotted } from 'spinners-react'
 
 const styles = {
   profile: {
@@ -31,11 +31,11 @@ const Profile = () => {
     variables: { id },
   });
 
-  const {
-    data: orderData,
-  } = useQuery(QUERY_ORDER);
+  // const {
+  //   data: orderData,
+  // } = useQuery(QUERY_ORDER);
 
-  const orders = orderData?.order || [];
+  // const orders = orderData?.order || [];
 
   // Get a list of all users
   // const { data: usersData } = useQuery(QUERY_USERS);
@@ -52,21 +52,20 @@ const Profile = () => {
 
   if (loading) {
     return (
-      <main>
-        <h4>Loading...</h4>
+      <main className="text-center mt-5">
+        <SpinnerDotted />
       </main>
     );
   }
 
-  if (!user?.username) {
+  if (!user?.username && Auth.loggedIn) {
     return (
       <>
         <main>
-          <Link
-            className="btn btn-success"
-            to="/Login">
-            Login
-          </Link>
+          <div className="container text-center text-success">
+            <h1>Uh oh! Please login to view your profile.</h1>
+        
+          </div>
         </main>
       </>
     );
@@ -76,47 +75,50 @@ const Profile = () => {
   const renderCurrentUserInfo = () => {
     if (id) return null;
     return (
-      <div className="container text-center">
-        <h2>Hi, {user.username}!</h2>
-        <div className="row text-center mx-5">
-          <div className="img-fluid">
-            <img
-              className="rounded-circle img-fluid"
-              src={Avatar}
-              alt="avatar"
-              style={styles.profile}
-            />
-          </div>
+      <>
 
-          <ul className="nav-link text-center">
-            <li
-              className="list-group-item col-12 text-center border-0"
-              style={styles.profile}
-            >
-              {" "}
-              username: {user.username}
-            </li>
-            <li
-              className="list-group-item col-12 text-center border-0"
-              style={styles.profile}
-            >
-              {" "}
-              email: {user.email}
-            </li>
-          </ul>
+
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-md-4">
+            </div>
+            <div className="col-md-4">
+              <div className="card">
+                <h2 className="card-header">Hi, {user.username}!</h2>
+                <div className="card-body">
+                  <img
+                    className="rounded-circle img-fluid"
+                    src={Avatar}
+                    alt="avatar"
+                    style={styles.profile}
+                  />
+                </div>
+                <div className="card-footer">
+                  <p className="fs-5">
+                    user: {user.username}
+                  </p>
+                  <p className="fs-5">
+                    email: {user.email}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4">
+            </div>
+          </div>
         </div>
-      </div>
+      </>
     );
   };
 
   return (
     <>
-      <main>
-        <div>
+      <main className="text-center">
+        <div className="container">
           {renderCurrentUserInfo()}
         </div>
         <div>
-          <h2>Previous Orders</h2>
+          {/* <h2>Previous Orders</h2>
           {orders.map((order) => (
             <div>
               <h4>{order.purchaseDate}</h4>
@@ -128,7 +130,7 @@ const Profile = () => {
                 </ul>
               ))}
             </div>
-          ))}
+          ))} */}
         </div>
       </main>
     </>

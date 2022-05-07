@@ -1,23 +1,36 @@
 import React, { useEffect } from "react";
 import { loadStripe } from "@stripe/stripe-js";
-import { useLazyQuery } from "@apollo/client";
-import { QUERY_CHECKOUT } from "../utils/queries";
+import { useLazyQuery, useQuery } from "@apollo/client";
+import { QUERY_CHECKOUT, QUERY_LOCATION } from "../utils/queries";
 import { idbPromise } from "../utils/helpers";
-// import ItemCard from "../components/ItemCard/ItemCard";
 import CartItem from "../components/CartItem";
 import Auth from "../utils/auth";
 import { useStoreContext } from "../utils/GlobalState";
 import { ADD_MULTIPLE_TO_CART } from "../utils/actions";
 import { Link } from "react-router-dom";
+import LocationCard from '../components/LocationCard'
+import Logo from "../assets/logo192.png";
 
 const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 
+const styles = {
+  base: {
+    paddingTop: "250px"
+  },
+  logo: {
+    height: "100px",
+    width: "100px"
+  }
+}
+
+
 const Cart = () => {
-  //const { data } = useQuery(QUERY_CART);
   const [state, dispatch] = useStoreContext();
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
 
-  //const items = data?.cart.items || [];
+  const { data: locationData } = useQuery(QUERY_LOCATION);
+  const locations = locationData?.locations || [];
+  console.log(locationData)
 
   useEffect(() => {
     if (data) {
@@ -61,12 +74,10 @@ const Cart = () => {
     });
   }
 
-  // console.log(loading)
-  //if (loading) return <h1>Loading...</h1>;
   return (
     <>
       <main>
- 
+
         <div className="container">
           <div className="row">
             {state.cart.length ? (
@@ -99,18 +110,23 @@ const Cart = () => {
               </div>
             ) : (
               <>
-
-
-                <p>There are no items in your cart. </p>
-                <Link
-                  to="/Rentals">
-                  <button className="mb-5 btn btn-success" >
-                    Add Rentals
-                  </button>
-
-
-                </Link>
-
+                <div className="text-center">
+                <img src={Logo} alt="Vita Amet" style={styles.logo} className="mb-5"/>
+                  <h2 className="text-success fw-light mb-5">
+                    <strong>Uh oh!</strong> You haven't added anything to your cart.
+                  </h2>
+                  <Link
+                    to="/Rentals">
+                    <button className="mb-5  px-5 mx-5 btn btn-success text-uppercase" >
+                      Shop Rentals
+                    </button>
+                  </Link>
+                  <div className="row" style={styles.base}>
+                    {locations.map((location) => (
+                      <LocationCard key={location._id} location={location} />
+                    ))}
+                  </div>
+                </div>
               </>
             )}
           </div>
