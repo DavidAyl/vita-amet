@@ -16,7 +16,6 @@ const LocationCard = ({ location }) => {
           />
           <div className="card-block">
             <h4 className="card-title">{location.name}</h4>
-            <p className="card-text">Explore items</p>
           </div>
         </div>
       </Link>

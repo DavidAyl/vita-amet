@@ -4,12 +4,9 @@ const itemSchema = new Schema(
   {
     name: {
       type: String,
-      // required: true,
     },
     location: {
       type: String,
-      //ref: "Location",
-      // required: true,
     },
     price: {
       type: Number,
@@ -23,7 +20,6 @@ const itemSchema = new Schema(
     },
     image: {
       type: String,
-      // required: true,
     },
     inStock: {
       type: Boolean,
