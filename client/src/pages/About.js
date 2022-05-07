@@ -17,7 +17,6 @@ const About = () => {
               </p>
             </div>
           </div>
-        {/* <LocationCards /> */}
         </div>
       </main>
 

@@ -3,8 +3,6 @@ import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { useStoreContext } from "../../utils/GlobalState";
 import { idbPromise } from "../../utils/helpers";
 
-// Import Link component for all internal application hyperlinks
-// import { Link } from 'react-router-dom';
 const styles = {
   desc: {
     height: "120px",

@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { FaBars, FaShoppingCart, FaUserCircle } from "react-icons/fa";
-// import { FaShoppingCart } from 'react-icons/fa';
 import { Link } from "react-router-dom";
 import Logo from "../../assets/logo192.png";
 import Auth from "../../utils/auth";
-// import Alert from 'react-bootstrap/Alert'
 
 
 function Navbar() {
@@ -111,17 +109,13 @@ function Navbar() {
             </div>
             </div>
           </div>
-          {/* <!-- Container wrapper --> */}
         </nav>
-        {/* <!-- Navbar --> */}
       </>
     );
   }
   // If logged out show login controls
   return (
     <>
-      {/* <Link to="/login">Login</Link>
-      <Link to="/signup">Signup</Link> */}
 
       {/* <!-- Navbar --> */}
       <nav className="navbar navbar-expand-lg bg-light navbar-light fixed-top py-5">
@@ -145,7 +139,6 @@ function Navbar() {
             aria-label="Toggle navigation" onClick={handleToggle}
           >
 
-
             <FaBars />
           </button>
 
@@ -162,7 +155,6 @@ function Navbar() {
                 <Link to="/about" className="nav-link">
                   About
                 </Link>
-                {/* <a className="nav-link" href="#">About</a> */}
               </div>
 
               <div className="nav-item me-4 inline-block text-center">
@@ -202,9 +194,7 @@ function Navbar() {
             </div>
           </div>
         </div>
-        {/* <!-- Container wrapper --> */}
       </nav>
-      {/* <!-- Navbar --> */}
     </>
   );
 }

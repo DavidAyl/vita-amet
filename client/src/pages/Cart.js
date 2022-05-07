@@ -3,7 +3,6 @@ import { loadStripe } from "@stripe/stripe-js";
 import { useLazyQuery } from "@apollo/client";
 import { QUERY_CHECKOUT } from "../utils/queries";
 import { idbPromise } from "../utils/helpers";
-// import ItemCard from "../components/ItemCard/ItemCard";
 import CartItem from "../components/CartItem";
 import Auth from "../utils/auth";
 import { useStoreContext } from "../utils/GlobalState";
@@ -13,11 +12,8 @@ import { Link } from "react-router-dom";
 const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 
 const Cart = () => {
-  //const { data } = useQuery(QUERY_CART);
   const [state, dispatch] = useStoreContext();
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
-
-  //const items = data?.cart.items || [];
 
   useEffect(() => {
     if (data) {
@@ -61,7 +57,6 @@ const Cart = () => {
     });
   }
 
-  // if (loading) return <h1>Loading...</h1>;
   return (
     <>
       <main>

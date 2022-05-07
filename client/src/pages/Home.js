@@ -3,7 +3,6 @@
 import React from 'react';
 
 import { FaLocationArrow, FaRegCheckCircle, FaShoppingCart } from 'react-icons/fa';
-// import LocationCards from '../components/LocationCards';
 
 
 import { Link } from "react-router-dom";
@@ -16,7 +15,7 @@ const Home = () => {
       <main>
         <div className="container-fluid">
           <div className="row mx-5 pb-5">
-            {/* jumbotron */}
+            {/* heading jumbo */}
             <div className="col-md-6">
               <h2>For those who love adventure</h2>
               <p>Vita Amet is focused on those who love adventure.</p>
@@ -127,10 +126,6 @@ const Home = () => {
               </blockquote>
             </div>
           </div>
-          {/* 3 Locations */}
-          {/* <LocationCards /> */}
-
-
         </div>
       </main>
 

@@ -8,11 +8,10 @@ import { FaMapMarkerAlt } from 'react-icons/fa'
 
 const styles = {
   footer: {
-    // position: "absolute",
     bottom: 0,
     width: "100%",
     backgroundColor: "#0b3008"
-    
+
   },
   rightBtn: {
     textAlign: "right",
@@ -22,7 +21,7 @@ const styles = {
   },
   h5: {
     letterSpacing: "10px"
-}
+  }
 
 }
 
@@ -41,11 +40,6 @@ const Footer = () => {
               <p className='text-center'>
                 Vita Amet is focused on those who love adventure. We have been making adventures more enjoyable since 2022.
               </p>
-
-              {/* <div className="form-outline form-white mb-4">
-                <input type="text" id="formControlLg" className="form-control form-control-lg" placeholder='Search' />
-                {/* <label className="form-label" for="formControlLg">Search</label> */}
-              {/* </div> */}
 
               <div className="mt-1 mb-2 fs-5 text-center">
 
@@ -101,8 +95,8 @@ const Footer = () => {
                   </li>
                   <li className="list-group-item bg-transparent text-white border-0 col" style={styles.textLeft}>
                     <span className="bg-transparent">
-                      <a  className="text-decoration-none text-white"href="mailto:customer@vita-amet.com">customer@vita-amet.com</a>
-                      </span>
+                      <a className="text-decoration-none text-white" href="mailto:customer@vita-amet.com">customer@vita-amet.com</a>
+                    </span>
                   </li>
                 </ul>
                 <ul className="list-group list-group-horizontal bg-transparent">
@@ -111,8 +105,8 @@ const Footer = () => {
                   </li>
                   <li className="list-group-item bg-transparent text-white border-0 col" style={styles.textLeft}>
                     <span className="bg-transparent">
-                      <a className="text-decoration-none text-white"href="tel:+1800-848-2268">1-800-VITA-AMT</a>
-                      </span>
+                      <a className="text-decoration-none text-white" href="tel:+1800-848-2268">1-800-VITA-AMT</a>
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -142,7 +136,7 @@ const Footer = () => {
           </div>
         </div>
 
-       
+
       </footer>
     </>
   );

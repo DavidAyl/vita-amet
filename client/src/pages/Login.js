@@ -5,12 +5,6 @@ import { LOGIN_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
 
-const styles = {
-  container: {
-    // marginTop: "100px",
-  },
-
-}
 
 const Login = () => {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -101,8 +95,8 @@ const Login = () => {
 
   return (
     <>
-      <main style={styles.main}>
-        <div style={styles.container}>
+      <main>
+        <div>
           <h5 className='text-center text-uppercase'>Login</h5>
 
           <div className='container'>
