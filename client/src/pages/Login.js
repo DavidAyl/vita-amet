@@ -2,14 +2,17 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
+import { SpinnerDotted } from 'spinners-react'
+import Logo from "../assets/logo192.png";
 
 import Auth from '../utils/auth';
 
-const styles = {
-  container: {
-    // marginTop: "100px",
-  },
 
+const styles = {
+  logo: {
+    height: "100px",
+    width: "100px"
+  }
 }
 
 const Login = () => {
@@ -46,21 +49,35 @@ const Login = () => {
     });
   };
 
+  const errorAlert = () => {
+    if (error) {
+      return (
+        <>
+         
+          <div className="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Uh Oh!</strong> Please check your credentials and try again.
+            <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close">
+            </button>
+          </div>
+        </>
+      )
+    }
+  }
+
   const renderForm = () => {
     if (data) {
       return (
-        <p>
-          Success! You may now head{' '}
-          <Link to="/">back to the homepage.</Link>
-        </p>
+        <main>
+          <div className='container text-center'>
+          <SpinnerDotted/>
+          </div>
+
+        </main>
       )
     }
     return (
 
       <>
-
-
-
         <form onSubmit={handleFormSubmit}>
 
           {/* <!-- Email input --> */}
@@ -104,17 +121,19 @@ const Login = () => {
 
   return (
     <>
-      <main style={styles.main}>
-        <div style={styles.container}>
-          <h5 className='text-center text-uppercase'>Login</h5>
+      <main>
+        <div className='text-center'>
+          <img src={Logo} alt="Vita Amet" style={styles.logo} className="mb-5" />
+          <h1 className='text-center text-uppercase titles'>login</h1>
 
           <div className='container'>
             <div className='row justify-content-center'>
               <div className='col-6'>
-                <div className="tab-content">
+                <div className="tab-content text-center">
+                  {errorAlert()}
+
 
                   {renderForm()}
-                  {error && <div>{error.message}</div>}
                 </div>
               </div>
             </div>

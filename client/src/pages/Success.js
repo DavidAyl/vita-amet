@@ -16,7 +16,7 @@ function Success() {
       const products = cart.map((item) => item._id);
 
       if (products.length) {
-        const { data } = await addOrder({ variables: { items: products } });
+        // const { data } = await addOrder({ variables: { items: products } });
         // const productData = data.addOrder.items;
 
         // await clearCart()
@@ -26,18 +26,21 @@ function Success() {
 
       setTimeout(() => {
         window.location.assign('/');
-      }, 3000);
+      }, 6000);
     }
 
     saveOrder();
   }, [addOrder]);
 
   return (
-    <div>
-      <h1>Success!</h1>
-      <h2>Thank you for your purchase!</h2>
-      <h2>You will now be redirected to the home page</h2>
-    </div>
+    <main>
+      <div className='container text-center mt-5'>
+        <h1 className='text-success mb-5 text-lowercase titles'>... Your order was placed</h1>
+        <h2 className='mb-5 text-success fw-light'>Now pack your bags and get ready for an <strong> adventure</strong>.</h2> 
+        <p className='mb-5'>You will now be redirected back to our homepage. Thank you!</p>
+        
+      </div>
+    </main>
   );
 }
 

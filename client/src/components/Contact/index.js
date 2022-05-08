@@ -27,7 +27,7 @@ function ContactComponent(props) {
     <div className="container mb-5">
       <div className=" text-center mt-5 ">
 
-        <h1 className='mb-3' >Contact Us</h1>
+        <h1 className='mb-3 titles' >contact us</h1>
 
 
       </div>
@@ -48,14 +48,12 @@ function ContactComponent(props) {
                     <div className="row">
                       <div className="col-md-6">
                         <div className="form-group mt-3">
-                          {/* <label htmlFor="form_name" className='m-2'>First Name</label> */}
                           <input id="form_name" type="text" name="first_name" className="form-control" placeholder="First Name" required="required" data-error="Firstname is required."></input>
 
                         </div>
                       </div>
                       <div className="col-md-6">
                         <div className="form-group mt-3">
-                          {/* <label htmlFor="form_lastname" className='m-2'>Lastname *</label> */}
                           <input id="form_lastname" type="text" name="last_name" className="form-control" placeholder="Last Name" required="required" data-error="Lastname is required."></input>
                         </div>
                       </div>
@@ -63,7 +61,6 @@ function ContactComponent(props) {
                     <div className="row">
                       <div className="col-md-12">
                         <div className="form-group">
-                          {/* <label htmlFor="form_email" className='m-2'>Email *</label> */}
                           <input id="form_email" type="email" name="email" className="form-control mt-3" placeholder="Email" required="required" data-error="Valid email is required."></input>
 
                         </div>
@@ -85,7 +82,6 @@ function ContactComponent(props) {
                     <div className="row">
                       <div className="col-md-12 mt-2">
                         <div className="form-group">
-                          {/* <label htmlFor="form_message" className='m-2'>Message *</label> */}
                           <textarea id="form_message" name="message" className="form-control mt-3" placeholder="Write your message here." rows="4" required="required" data-error="Please, leave us a message."></textarea
                           >
                         </div>
