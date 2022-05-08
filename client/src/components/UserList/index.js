@@ -14,7 +14,6 @@ const User = ({ _id, username }) => {
 };
 
 const UserList = ({ users, title }) => {
-  // if (!users.length) return <h3>No Users</h3>;
 
   const renderUsers = () => {
     if (!users) return null;

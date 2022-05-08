@@ -51,11 +51,17 @@ const CartItem = ({ item }) => {
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
               <div class="col-md-6">
                 <div className="flex-row space-between">
                   <p>
                     <strong className="text-success">{item.name}</strong>
                   </p>
+=======
+              <div className="col-md-6">
+                    <div className="flex-row space-between">
+                  <p><strong className="text-success">{item.name}</strong></p>
+>>>>>>> fb898fc9cf81dd6e36a57f714ad3c49124b7b35a
                   <p>{item.description}</p>
                   <p>
                     <strong className="text-success">${item.price}</strong>
