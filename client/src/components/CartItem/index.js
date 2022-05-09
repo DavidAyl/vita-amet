@@ -36,21 +36,21 @@ const CartItem = ({ item }) => {
     <>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-lg-12 card mb-5 pt-5 mx-3 px-2">
+          <div className="col-lg-12 mb-5 pt-5 mx-3 px-2">
             <div className="row">
-              <div className="col-lg-3">
+              <div className="col-md-2 text-center">
                 <img
-                  className="img-fluid"
+                  className="img-fluid mb-3"
                   alt={item.name}
                   src={`https://drive.google.com/uc?export=view&id=${item.image}`}
+                  height="200px"
                 />
-                <div className="row">
+                {/* <div className="row">
                   <div className="col-lg-12">
-                    <p>{item.name}</p>
-                    <p className="text-success fw-bold px-1">${item.price}</p>
                   </div>
-                </div>
+                </div> */}
               </div>
+              <div className="col-md-2"></div>
               <div className="col-md-6">
                 <div className="flex-row space-between">
                   <p>
