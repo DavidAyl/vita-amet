@@ -89,7 +89,7 @@ const resolvers = {
       throw new AuthenticationError("Not logged in");
     },
     addOrder: async (parent, { items }, context) => {
-      console.log(context);
+      // console.log(context);
       if (context.user) {
         const order = new Order({ items });
 

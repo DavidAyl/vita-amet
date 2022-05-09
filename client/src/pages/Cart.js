@@ -30,7 +30,7 @@ const Cart = () => {
 
   const { data: locationData } = useQuery(QUERY_LOCATION);
   const locations = locationData?.locations || [];
-  console.log(locationData)
+  // console.log(locationData)
 
   useEffect(() => {
     if (data) {
@@ -67,7 +67,7 @@ const Cart = () => {
         itemsIds.push(item._id);
       }
     });
-    console.log(itemsIds);
+    // console.log(itemsIds);
 
     getCheckout({
       variables: { items: itemsIds },
