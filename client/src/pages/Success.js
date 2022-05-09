@@ -26,7 +26,7 @@ function Success() {
 
       setTimeout(() => {
         window.location.assign('/');
-      }, 1000000);
+      }, 10000);
     }
 
     saveOrder();
