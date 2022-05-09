@@ -21,9 +21,14 @@ Here at Vita Amet we are a company that values the excitement and adventure of a
 
 ## Visuals
 
-![Chiron Portal](/public/images/chiron.png)
-![Chiron Signup](/public/images/chrion-signup.png)
-![Chiron Portal](/public/images/chiron-login.png)
+![Viva Amet Homepage](/client/src/assets/Vita-Amet.png)
+![Viva Amet About](/client/src/assets/Vita-Amet-About.png)
+![Viva Amet Location](/client/src/assets/Vita-Amet-Location.png)
+![Viva Amet Rentals](/client/src/assets/Vita-Amet-Rentals.png)
+![Viva Amet Contact](/client/src/assets/Vita-Amet-Contact.png)
+![Viva Amet Login](/client/src/assets/Vita-Amet-Login.png)
+![Viva Amet Signup](/client/src/assets/Vita-Amet-Signup.png)
+![Viva Amet Cart](/client/src/assets/Vita-Amet-Cart.png)
 
 ---
 
