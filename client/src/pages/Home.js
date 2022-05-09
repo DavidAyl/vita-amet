@@ -3,18 +3,18 @@
 import React from 'react';
 
 import { FaLocationArrow, FaRegCheckCircle, FaShoppingCart } from 'react-icons/fa';
-
-
 import { Link } from "react-router-dom";
 
-const styles={
+import Hikers from "../assets/hikers.jpg"
+import Kayak from "../assets/kayak.jpg"
+
+const styles = {
   h2: {
     letterSpacing: "2px",
   }
 }
 
 const Home = () => {
-
 
   return (
     <>
@@ -23,7 +23,7 @@ const Home = () => {
           <div className="row mx-4 pb-5">
             {/* heading jumbo */}
             <div className="col-lg-5">
-              <h2 className="fw-normal fs-4 mt-2"style={styles.h2}>For those who seek adventure</h2>
+              <h2 className="fw-normal fs-4 mt-2" style={styles.h2}>For those who seek adventure</h2>
               <span className='mb-3'>Vita Amet is focused on those who love adventure.</span>
               <br />
               <span className='me-5'>
@@ -31,12 +31,12 @@ const Home = () => {
                 activities without the cost of purchasing equipment.
               </span>
               <div className='text-start mt-3'>
-              <Link to="/Location">
-                <button type="button" className="btn btn-warning mb-5 px-4 py-2 my-2 fs-5">
-                  Begin your Adventure
-                </button>
-              </Link>
-                <blockquote className="blockquote text-end me-5">
+                <Link to="/Location">
+                  <button type="button" className="btn btn-warning mb-5 px-4 py-2 my-2 fs-5">
+                    Begin your Adventure
+                  </button>
+                </Link>
+                <blockquote className="blockquote text-end">
                   <p>&#9733; &#9733; &#9733; &#9733; &#9733;</p>
                   <p className="mb-0">
                     "Vita Amet always has what I need, where I need it. There
@@ -49,9 +49,13 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="col-lg-7">
+            <div className="col-lg-1">
+              {/* styling spacing */}
+            </div>
 
-              <img className="img-fluid" alt="Creek" src="https://images.theconversation.com/files/405661/original/file-20210610-18-imwshy.jpg?ixlib=rb-1.1.0&rect=6%2C0%2C4486%2C2997&q=45&auto=format&w=926&fit=clip"/>
+            <div className="col-lg-6">
+
+              <img className="img-fluid" alt="Creek" src={Hikers} />
 
             </div>
           </div>
@@ -101,15 +105,10 @@ const Home = () => {
 
                 <Link
                   className="nav-link col-md-4 text-center text-dark"
-                  to="/Cart"
-                >
-
+                  to="/Cart">
                   <div className="card border-0 bg-light">
                     <p className='text-center fs-1 text-dark'>
                       < FaShoppingCart /></p>
-
-
-
                     <div className="card-block">
                       <h3 className="card-title fs-4">Checkout</h3>
                       <p className="card-text mx-3">
@@ -126,13 +125,13 @@ const Home = () => {
 
           {/* Quotes for business */}
           <div className="row my-5 mx-4 py-5">
-            <div className="col-md-7">
-
-              <img className="card-img-top" alt="roadquote" src="https://www.orthocarolina.com/imagecache/compReg/orthocarolina_paddling_kayak_winston_salem_carolinas_1.png"  height="300x"/>
+            <div className="col-md-6">
+              <img className="card-img-top img-fluid" alt="roadquote" src={Kayak} height="auto" />
+            </div>
+            <div className="col-md-1">
+              {/* styling space */}
             </div>
             <div className="col-md-5 py-5">
-
- 
               <blockquote className="blockquote text-center">
                 <p>&#9733; &#9733; &#9733; &#9733; &#9734;</p>
                 <p className="mb-0">
