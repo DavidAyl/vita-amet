@@ -108,14 +108,12 @@ const Cart = () => {
                   )}
                 </div>
                 <div className="text-small text-center mb-5">
-                  <p className="text-small text-center">After ordering, please expect an email confirmation providing steps for pickup.  </p>
-                  <p className="text-small text-center">All items must be returned in original condition and will be subject to inspection. Any damage to items will incur additional fees charged to the credit card on file. Thank you!</p>
+                  <p>*Items are priced per day, and will incur additional fees until returned. Items must be returned by closing hours each day. Contact us for specifics.</p>
+                  <p className="text-small text-center">*After ordering, please expect an email confirmation providing steps for pickup and disclosure/signing agreements.</p>
+                  <p className="text-small text-center">*All items must be returned in original condition and will be subject to inspection. Any damage to items will incur additional fees charged to the credit card on file. Thank you!</p>
                 </div>
 
               </div>
-
-
-
               
             ) : (
               <>
