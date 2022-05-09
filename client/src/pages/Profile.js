@@ -70,7 +70,12 @@ const Profile = () => {
       </>
     );
   }
-
+  
+  const username = (user.username);
+  const cappedUsername = function capUsername() {
+    return username.charAt(0).toUpperCase() + username.slice(1);
+  }
+  console.log(cappedUsername())
 
   const renderCurrentUserInfo = () => {
     if (id) return null;
@@ -84,7 +89,7 @@ const Profile = () => {
             </div>
             <div className="col-md-4">
               <div className="card">
-                <h2 className="card-header">Hi, {user.username}!</h2>
+                <h2 className="card-header">Hi {cappedUsername()},</h2>
                 <div className="card-body">
                   <img
                     className="rounded-circle img-fluid"
@@ -93,12 +98,15 @@ const Profile = () => {
                     style={styles.profile}
                   />
                 </div>
-                <div className="card-footer">
+                <div className="card-footer text-center">
                   <p className="fs-5">
-                    user: {user.username}
+                    <strong>user:</strong> {user.username}
                   </p>
                   <p className="fs-5">
-                    email: {user.email}
+                    <strong>email:</strong> {user.email}
+                  </p>
+                  <p className="fs-5 ">
+                    <a className="text-dark text-decoration-none" href={`tel+${user.phone}`}><strong> phone:</strong> {user.phone}</a>
                   </p>
                 </div>
               </div>
