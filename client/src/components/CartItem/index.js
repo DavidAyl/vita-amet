@@ -34,7 +34,6 @@ const CartItem = ({ item }) => {
 
   return (
     <>
-<<<<<<< HEAD
       <div className="container-fluid">
         <div className="row">
           <div className="col-lg-12 card mb-5 pt-5 mx-3 px-2">
@@ -47,17 +46,6 @@ const CartItem = ({ item }) => {
                     <p className="text-success fw-bold px-1">${item.price}</p>
                   </div>
                 </div>
-=======
-
-
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12 my-4">
-            <div class="row">
-              <div class="col-md-6 flex-row space-between">
-                <img
-                  className="img-fluid " alt={item.name} src={"http://via.placeholder.com/300"} />
->>>>>>> abf8bab0a6e561b2be50e0b65437d76138ce9ceb
               </div>
               <div class="col-md-6">
                     <div className="flex-row space-between">
