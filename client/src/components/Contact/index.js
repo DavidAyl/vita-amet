@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser';
 
 const Result = () => {
   return (
-    <p>Your message has been sent!</p>
+    <p className='pt-4'>Your message has been sent!</p>
   )
 }
 
