@@ -12,14 +12,14 @@ function Navbar() {
   };
 
   const [navbarOpen, setNavbarOpen] = useState(false);
-  
+
   const handleToggle = () => {
     setNavbarOpen(!navbarOpen)
   }
 
-  if(navbarOpen) {
-    
-    
+  if (navbarOpen) {
+
+
   }
 
 
@@ -35,7 +35,7 @@ function Navbar() {
 
             <Link className="navbar-brand logo" to="/">
               <img src={Logo} alt="logo" height="50px" />
-                
+
               <span className="navBrand ms-3 fs-2">Vita Amet</span>
             </Link>
 
@@ -91,20 +91,26 @@ function Navbar() {
                     Logout
                   </p>
                 </div>
-              
+
 
                 <div className="nav-item me-4 fs-5 text-center inline-block">
-                  <Link to="/me" className="nav-link text-secondary">
+                  <Link
+                    aria-label="profile"
+                    to="/me"
+                    className="nav-link text-secondary">
                     <FaUserCircle />
                   </Link>
                 </div>
 
-              <div className="nav-item me-4 fs-5 text-center inline-block">
-                <Link to="/cart" className="nav-link text-secondary">
+                <div className="nav-item me-4 fs-5 text-center inline-block">
+                  <Link
+                    to="/cart"
+                    className="nav-link text-secondary"
+                    aria-label="shopping-cart">
                     <FaShoppingCart />
                   </Link>
                 </div>
-            </div>
+              </div>
             </div>
           </div>
         </nav>
@@ -143,8 +149,8 @@ function Navbar() {
 
           {/* <!-- Collapsible wrapper --> */}
           <div className={`collapse navbar-collapse justify-content-end ${navbarOpen && "show"}`}
-          
-          id="navbarSupportedContent">
+
+            id="navbarSupportedContent">
 
             {/* <!-- Icons --> */}
             <div className="navbar-nav justify-content-end me-1">
@@ -185,7 +191,10 @@ function Navbar() {
               </div>
 
               <div className="nav-item me-4 fs-5 text-center inline-block">
-                <Link to="/cart" className="nav-link">
+                <Link
+                  aria-label="shopping-cart"
+                  to="/cart"
+                  className="nav-link">
                   <FaShoppingCart />
                 </Link>
               </div>

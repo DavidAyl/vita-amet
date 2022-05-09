@@ -107,7 +107,16 @@ const Cart = () => {
                     </div>
                   )}
                 </div>
+                <div className="text-small text-center mb-5">
+                  <p className="text-small text-center">After ordering, please expect an email confirmation providing steps for pickup.  </p>
+                  <p className="text-small text-center">All items must be returned in original condition and will be subject to inspection. Any damage to items will incur additional fees charged to the credit card on file. Thank you!</p>
+                </div>
+
               </div>
+
+
+
+              
             ) : (
               <>
                 <div className="text-center">
@@ -126,6 +135,7 @@ const Cart = () => {
                       <LocationCard key={location._id} location={location} />
                     ))}
                   </div>
+                  
                 </div>
               </>
             )}

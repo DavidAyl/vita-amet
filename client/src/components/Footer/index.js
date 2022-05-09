@@ -44,6 +44,7 @@ const Footer = () => {
               <div className="mt-1 mb-2 fs-5 text-center">
 
                 <a
+                  aria-label='facebook'
                   className='text-decoration-none text-white mx-2'
                   href='https://www.facebook.com/'
                   target="_blank"
@@ -52,6 +53,7 @@ const Footer = () => {
                 </a>
 
                 <a
+                  aria-label='github'
                   className='text-decoration-none text-white mx-2'
                   href='https://github.com/DavidAyl/vita-amet'
                   target="_blank"
@@ -60,6 +62,7 @@ const Footer = () => {
                 </a>
 
                 <a
+                  aria-label='instagram'
                   className='text-decoration-none text-white mx-2'
                   href='https://www.instagram.com/'
                   target="_blank"
@@ -96,6 +99,7 @@ const Footer = () => {
                   <li className="list-group-item bg-transparent text-white border-0 col" style={styles.textLeft}>
                     <span className="bg-transparent">
                       <a
+                        aria-label="email"
                         className="text-decoration-none text-white" href="mailto:customer@vita-amet.com"
                         rel="noreferrer">customer@vita.com</a>
                     </span>
@@ -108,6 +112,7 @@ const Footer = () => {
                   <li className="list-group-item bg-transparent text-white border-0 col" style={styles.textLeft}>
                     <span className="bg-transparent">
                       <a
+                        aria-label="phone"
                         className="text-decoration-none text-white"
                         href="tel:+1800-848-2268"
                         rel="noreferrer">1-800-VITA-AMT</a>
