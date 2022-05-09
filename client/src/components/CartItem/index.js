@@ -39,7 +39,11 @@ const CartItem = ({ item }) => {
           <div className="col-lg-12 card mb-5 pt-5 mx-3 px-2">
             <div className="row">
               <div className="col-lg-3">
-                <img className="img-fluid" alt={item.name} src={`https://drive.google.com/uc?export=view&id=${item.image}`} />
+                <img
+                  className="img-fluid"
+                  alt={item.name}
+                  src={`https://drive.google.com/uc?export=view&id=${item.image}`}
+                />
                 <div className="row">
                   <div className="col-lg-12">
                     <p>{item.name}</p>
@@ -47,35 +51,37 @@ const CartItem = ({ item }) => {
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
-                    <div className="flex-row space-between">
-                  <p><strong className="text-success">{item.name}</strong></p>
+              <div className="col-md-6">
+                <div className="flex-row space-between">
+                  <p>
+                    <strong className="text-success">{item.name}</strong>
+                  </p>
                   <p>{item.description}</p>
-                      <p><strong className="text-success">${item.price}</strong></p>
-                      <span className=" border-0">
-                        Qty:
-                        <input
-                          className=" col-3 mx-2"
-                          type="number"
-                          placeholder="1"
-                          value={item.purchaseQuantity}
-                          onChange={onChange}
-                        />
-
-                        <button
-                          className="btn btn-warning mx-2"
-                          onClick={() => removeFromCart(item)}
-                        >
-                          Remove
-                        </button>
+                  <p>
+                    <strong className="text-success">${item.price}</strong>
+                  </p>
+                  <span className=" border-0">
+                    Qty:
+                    <input
+                      className=" col-3 mx-2"
+                      type="number"
+                      placeholder="1"
+                      value={item.purchaseQuantity}
+                      onChange={onChange}
+                    />
+                    <button
+                      className="btn btn-warning mx-2"
+                      onClick={() => removeFromCart(item)}
+                    >
+                      Remove
+                    </button>
                   </span>
-                    </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
     </>
   );
 };

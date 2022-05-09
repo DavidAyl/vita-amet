@@ -3,13 +3,17 @@ import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { useStoreContext } from "../../utils/GlobalState";
 import { idbPromise } from "../../utils/helpers";
 
-// Import Link component for all internal application hyperlinks
-// import { Link } from 'react-router-dom';
 const styles = {
   desc: {
     height: "120px",
     overflow: "scroll",
   },
+  title: {
+    height: "50px"
+  },
+  image: {
+    height: "175px"
+  }
 };
 
 const ItemCard = ({ item }) => {
@@ -44,32 +48,35 @@ const ItemCard = ({ item }) => {
   };
 
   return (
-    <div className="card col-lg-3 text-center mb-3 rounded border-0">
-      {/* <img alt="Bootstrap Image Preview" src={item.image} /> */}
-      <img
-        className="img-fluid mt-3 rounded mx-3 h-25"
-        src={`http://drive.google.com/uc?export=view&id=${item.image}`}
-        alt=""
-      ></img>
-      <h4 className="text-uppercase fs-5 mt-4">{item.name}</h4>
-      <div className=" my-2 px-2">
-        <p className="text-success fw-bold px-1">${item.price}</p>
-        <div className="" style={styles.desc}>
-          <p>{item.description}</p>
-        </div>
-        <button className="btn btn-success mt-3 mb-5" onClick={addToCart}>
-          Add to cart
-        </button>
+    <>
+      <div className="col-md-3 text-center rounded card mb-5 pb-5">
+        <img
+          className="mt-3 rounded mx-3"
+          src={`http://drive.google.com/uc?export=view&id=${item.image}`}
+          alt={item.name}
+          style={styles.image}
 
-        <div className="alert alert-success alert-dismissible fade show" role="alert" style={itemAdded()} onClick={() => setHasBeenAdded(false)}>
-          <strong>Yay! {item.name}</strong> added to cart!
-          <button type="button" className="btn-close" data-dismiss="alert" aria-label="Close">
-            {/* <span aria-hidden="true">&times;</span> */}
-
+        ></img>
+        <h4 className="text-uppercase fs-5 mt-4" style={styles.title}>{item.name}</h4>
+        <div className="px-2">
+          <p className="text-success fw-bold px-1">${item.price}</p>
+          <div className="" style={styles.desc}>
+            <p>{item.description}</p>
+          </div>
+          <button className="btn btn-success mt-3" onClick={addToCart}>
+            Add to cart
           </button>
+
+          <div className="alert alert-success alert-dismissible fade show mt-5" role="alert" style={itemAdded()} onClick={() => setHasBeenAdded(false)}>
+            <p><strong>{item.name}</strong>  added to cart!</p>
+
+            <button type="button" className="btn-close" data-dismiss="alert" aria-label="Close">
+
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

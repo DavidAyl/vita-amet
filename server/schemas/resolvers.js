@@ -76,7 +76,7 @@ const resolvers = {
   Mutation: {
     addUser: async (_, args) => {
       const user = await User.create(args);
-
+      console.log(args)
       const token = signToken(user);
       return { token, user };
     },
@@ -89,7 +89,7 @@ const resolvers = {
       throw new AuthenticationError("Not logged in");
     },
     addOrder: async (parent, { items }, context) => {
-      console.log(context);
+      // console.log(context);
       if (context.user) {
         const order = new Order({ items });
 

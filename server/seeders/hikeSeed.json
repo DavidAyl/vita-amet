@@ -2,122 +2,71 @@
   {
     "name": "Trekking Pole",
     "price": "17.99",
-    "description":"Trekking poles are a common hiking accessory that function to assist walkers with their rhythm, to provide stability, and reduce strain on joints on rough terrain.",
-<<<<<<< HEAD
-    "image":"1uXFPjLBtyr-TeBK5NBaKPCd2C4lNIpUy",
-    "location":"Mountain"
-=======
-    "image":"",
-    "location":"Forest"
->>>>>>> abf8bab0a6e561b2be50e0b65437d76138ce9ceb
-    
+    "description": "Trekking poles are a common hiking accessory that function to assist walkers with their rhythm, to provide stability, and reduce strain on joints on rough terrain.",
+    "image": "1uXFPjLBtyr-TeBK5NBaKPCd2C4lNIpUy",
+    "location": "Forest"
   },
   {
     "name": "Satelite Comms",
     "price": "24.99",
-    "description":"When you need two-way communication capability and your cell phone will not work, a satellite messaging device is your next best choice. These devices use communication satellites to send an email, SMS or SOS message.",
-<<<<<<< HEAD
-    "image":"1BCYZsUaBy2javxjJsxNFN6FzX4khN6DO",
-    "location":"Mountain"
-=======
-    "image":"",
-    "location":"Forest"
->>>>>>> abf8bab0a6e561b2be50e0b65437d76138ce9ceb
+    "description": "When you need two-way communication capability and your cell phone will not work, a satellite messaging device is your next best choice. These devices use communication satellites to send an email, SMS or SOS message.",
+    "image": "1BCYZsUaBy2javxjJsxNFN6FzX4khN6DO",
+    "location": "Forest"
   },
   {
     "name": "Handheld GPS ",
     "price": "24.99",
-    "description":"A handheld GPS is a device that uses the Global Positioning System, combining modern geographic technology with a portable, user-friendly device for everyday use",
-<<<<<<< HEAD
-    "image":"1paDg5Uee4asRjv-rolUWLnw2D7uHh6IJ",
-    "location":"Mountain"
-=======
-    "image":"",
-    "location":"Forest"
->>>>>>> abf8bab0a6e561b2be50e0b65437d76138ce9ceb
+    "description": "A handheld GPS is a device that uses the Global Positioning System, combining modern geographic technology with a portable, user-friendly device for everyday use",
+    "image": "1Jz-yOVOWiOgia3IM2fKmRsn6dvi_SaqM",
+    "location": "Forest"
   },
   {
     "name": "Flashlight",
     "price": "3.00",
-    "description":"A flashlight or torch is a portable hand-held electric lamp. ",
-<<<<<<< HEAD
-    "image":"1LaUZGnd8CLhVcD5Il_ZkArrUD7HJjqrx",
-    "location":"Mountain"
-=======
-    "image":"",
-    "location":"Forest"
->>>>>>> abf8bab0a6e561b2be50e0b65437d76138ce9ceb
+    "description": "A flashlight or torch is a portable hand-held electric lamp. ",
+    "image": "1LaUZGnd8CLhVcD5Il_ZkArrUD7HJjqrx",
+    "location": "Forest"
   },
   {
     "name": "Solar Charger",
     "price": "15.99",
-    "description":"A solar charger is a charger that employs solar energy to supply electricity to devices or batteries.",
-<<<<<<< HEAD
-    "image":"15-H-jpJzJT4fDwpmILjd-EKxQfF846mk",
-    "location":"Mountain"
-=======
-    "image":"",
-    "location":"Forest"
->>>>>>> abf8bab0a6e561b2be50e0b65437d76138ce9ceb
+    "description": "A solar charger is a charger that employs solar energy to supply electricity to devices or batteries.",
+    "image": "15-H-jpJzJT4fDwpmILjd-EKxQfF846mk",
+    "location": "Forest"
   },
   {
     "name": "Binoculars",
     "price": "9.99",
-    "description":"Binoculars or field glasses are two refracting telescopes mounted side-by-side and aligned to point in the same direction, allowing the viewer to use both eyes when viewing distant objects.",
-<<<<<<< HEAD
-    "image":"17FsAo6eyqFLERyaOc7ISETFmNZZbY9gX",
-    "location":"Mountain"
-=======
-    "image":"",
-    "location":"Forest"
->>>>>>> abf8bab0a6e561b2be50e0b65437d76138ce9ceb
+    "description": "Binoculars or field glasses are two refracting telescopes mounted side-by-side and aligned to point in the same direction, allowing the viewer to use both eyes when viewing distant objects.",
+    "image": "17FsAo6eyqFLERyaOc7ISETFmNZZbY9gX",
+    "location": "Forest"
   },
   {
     "name": "Headlamp",
     "price": "5.99",
-    "description":"Is a light which is designed to be worn on the head.",
-<<<<<<< HEAD
-    "image":"1UjxBSLLDkVMThLgpT3_0D6HwgY4DcIOX",
-    "location":"Mountain"
-=======
-    "image":"",
-    "location":"Forest"
->>>>>>> abf8bab0a6e561b2be50e0b65437d76138ce9ceb
+    "description": "Is a light which is designed to be worn on the head.",
+    "image": "1UjxBSLLDkVMThLgpT3_0D6HwgY4DcIOX",
+    "location": "Forest"
   },
   {
     "name": "Lantern",
     "price": "7.99",
-    "description":"A lamp with a transparent case protecting the flame or electric bulb, and typically having a handle by which it can be carried or hung.",
-<<<<<<< HEAD
-    "image":"17UuTlPphz-EvPT5-8p9uP48If1SLBtr5",
-    "location":"Mountain"
-=======
-    "image":"",
-    "location":"Forest"
->>>>>>> abf8bab0a6e561b2be50e0b65437d76138ce9ceb
+    "description": "A lamp with a transparent case protecting the flame or electric bulb, and typically having a handle by which it can be carried or hung.",
+    "image": "17UuTlPphz-EvPT5-8p9uP48If1SLBtr5",
+    "location": "Forest"
   },
   {
     "name": "Compass",
     "price": "2.99",
-    "description":"A compass is a device that shows the cardinal directions used for navigation and geographic orientation. ",
-<<<<<<< HEAD
-    "image":"1lnKL8E0TIzp7zrrl0QzieVjoLQ8sueX3",
-    "location":"Mountain"
-=======
-    "image":"",
-    "location":"Forest"
->>>>>>> abf8bab0a6e561b2be50e0b65437d76138ce9ceb
+    "description": "A compass is a device that shows the cardinal directions used for navigation and geographic orientation. ",
+    "image": "1lnKL8E0TIzp7zrrl0QzieVjoLQ8sueX3",
+    "location": "Forest"
   },
   {
     "name": "General Backpack",
     "price": "8.99",
-    "description":"A backpack—also called knapsack, schoolbag, rucksack, rucksac, pack, sackpack, booksack, bookbag or backsack—is, in its simplest frameless form, a fabric sack carried on one's back and secured with two straps that go over the shoulders, ",
-<<<<<<< HEAD
-    "image":"1PLUC96Wc4Brt61bAw8coN0miMUdkmVzB",
-    "location":"Mountain"
-=======
-    "image":"",
-    "location":"Forest"
->>>>>>> abf8bab0a6e561b2be50e0b65437d76138ce9ceb
+    "description": "A backpack—also called knapsack, schoolbag, rucksack, rucksac, pack, sackpack, booksack, bookbag or backsack—is, in its simplest frameless form, a fabric sack carried on one's back and secured with two straps that go over the shoulders, ",
+    "image": "1PLUC96Wc4Brt61bAw8coN0miMUdkmVzB",
+    "location": "Forest"
   }
 ]
