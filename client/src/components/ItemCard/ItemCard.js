@@ -69,6 +69,7 @@ const ItemCard = ({ item }) => {
 
           <div className="alert alert-success alert-dismissible fade show mt-5" role="alert" style={itemAdded()} onClick={() => setHasBeenAdded(false)}>
             <p><strong>{item.name}</strong>  added to cart!</p>
+
             <button type="button" className="btn-close" data-dismiss="alert" aria-label="Close">
 
             </button>
